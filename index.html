@@ -8,6 +8,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+@media (max-width:700px){
+  .card{
+    border-radius:0;
+  }
+
+  .container{
+    padding:0;
+  }
+}
 :root{
   --localeo-blue:#1E4C8A;
   --localeo-blue-light:#4F78B6;
@@ -23,23 +33,20 @@
 *{box-sizing:border-box}
 
 body{
-  margin:0;
+  margin:0; 
   font-family:'Inter',sans-serif;
   background:
     radial-gradient(circle at 20% 40%, rgba(30,76,138,1), transparent 62%),
     radial-gradient(circle at 80% 30%, rgba(30,76,138,1), transparent 62%),
     linear-gradient(135deg, rgba(242,140,40), rgba(30,76,138))
   color:var(--ink);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:100vh;
-  padding:24px;
 }
 
 .container{
   width:100%;
   max-width:900px;
+  margin: auto;
+  padding: 20px;
 }
 
 .card{
