@@ -12,8 +12,8 @@
   --localeo-blue:#1E4C8A;
   --localeo-blue-light:#4F78B6;
   --localeo-orange:#F28C28;
-  --localeo-gold:#E5A823;
-  --localeo-bg:#F6F2E8;
+  --localeo-gold:#F28C28;
+  --localeo-bg:#F28C28;
   --ink:#0F172A;
   --muted:#475569;
   --border:rgba(30, 76, 138, 0.18);
@@ -26,7 +26,7 @@ body{
   margin:0;
   font-family:'Inter',sans-serif;
   background:
-    radial-gradient(circle at 20% 40%, rgba(242,140,40,1), transparent 62%),
+    radial-gradient(circle at 20% 40%, rgba(30,76,138,1), transparent 62%),
     radial-gradient(circle at 80% 30%, rgba(30,76,138,1), transparent 62%),
     linear-gradient(135deg, rgba(242,140,40), rgba(30,76,138))
   color:var(--ink);
@@ -54,9 +54,9 @@ body{
   padding:38px 22px 26px;
   text-align:center;
   background:
-    radial-gradient(circle at 20% 40%, rgba(242,140,40,0.30), transparent 62%),
-    radial-gradient(circle at 80% 30%, rgba(79,120,182,0.30), transparent 62%),
-    linear-gradient(135deg, rgba(79,120,182,0.25), rgba(30,76,138,0.55));
+    radial-gradient(circle at 20% 40%, rgba(30,76,138,0.2), transparent 62%),
+    radial-gradient(circle at 80% 30%, rgba(30,76,138,0.8), transparent 62%),
+    linear-gradient(135deg, rgba(30,76,138,0.25), rgba(30,76,138,0.55));
   color:#fff;
 }
 
@@ -87,6 +87,7 @@ body{
   letter-spacing:-0.6px;
   font-size:40px;
   line-height:1;
+  color:var(--localeo-blue);
 }
 
 .name .eo{ color:var(--localeo-orange); }
@@ -161,9 +162,9 @@ body{
   width:26px;
   height:26px;
   border-radius:999px;
-  background:rgba(229,168,35,0.18);
-  border:1px solid rgba(229,168,35,0.35);
-  color:#8A5A12;
+  background:rgba(242,140,40,0.18);
+  border:1px solid rgba(242,140,40,0.35);
+  color:var(--localeo-orange);
   display:grid;
   place-items:center;
   font-weight:800;
@@ -247,20 +248,17 @@ line-height:1.5;
 
     <div class="header">
       <div class="brand">
-        <div class="logoBox">L</div>
-        <div class="name">Local<span class="eo">eo</span></div>
+        <img src="./img/logo_site.png" alt="Localeo" style="height: 100px;"/>
       </div>
 
       <div class="tagline">
-        12 Attirez de <span class="accent">nouveaux clients</span><br>
+        Attirez de <span class="accent">nouveaux clients</span><br>
         dans votre commerce
       </div>
 
       <p class="pitch">
         Localeo incite les habitants à consommer dans les commerces de leur commune
-        grâce à des packs de prestations locales.<br><br>
-        <strong>Et si votre prochain client était déjà dans votre commune ?</strong><br>
-        Localeo l’aide à venir jusqu’à vous.
+        grâce à des packs de prestations locales.<br>
       </p>
     </div>
 
@@ -319,13 +317,13 @@ line-height:1.5;
 
       <div class="links">
         <!-- Remplace les liens ci-dessous -->
-        <a class="button primary" href="LIEN_FORMULAIRE" target="_blank" rel="noopener">
+        <a class="button primary" href="https://tally.so/r/Zj6NMy" target="_blank" rel="noopener">
           Proposer une prestation <span class="arrow">→</span>
         </a>
-        <a class="button" href="LIEN_FACEBOOK" target="_blank" rel="noopener">
+        <a class="button" href="https://www.facebook.com/profile.php?id=61586409877177&locale=fr_FR" target="_blank" rel="noopener">
           Suivre Localeo sur Facebook <span class="arrow">→</span>
         </a>
-        <a class="button" href="mailto:EMAIL_CONTACT">
+        <a class="button" href="mailto:contactlocaleo@gmail.com">
           Nous contacter <span class="arrow">→</span>
         </a>
       </div>
@@ -343,4 +341,3 @@ line-height:1.5;
 </script>
 </body>
 </html>
-
