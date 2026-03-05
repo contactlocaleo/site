@@ -1,192 +1,303 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Localeo — Packs de prestations locales</title>
-  <meta name="description" content="Localeo incite les habitants à consommer local grâce à des packs de prestations locales." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Localeo</title>
 
-  <!-- Police simple (optionnel) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --blue:#1E4C8A;
-      --blue2:#2B63B5;
-      --orange:#F28C28;
-      --ink:#0f172a;
-      --muted:#475569;
-      --border:#e2e8f0;
-      --shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--ink);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:
-        radial-gradient(900px 400px at 20% 0%, rgba(242,140,40,0.25), transparent 60%),
-        radial-gradient(900px 400px at 80% 0%, rgba(43,99,181,0.25), transparent 60%),
-        linear-gradient(180deg, #f8fafc 0%, #ffffff 60%, #f8fafc 100%);
-      padding: 24px;
-    }
-    .card{
-      width:min(720px, 100%);
-      background: rgba(255,255,255,0.85);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    header{
-      padding: 26px 22px 16px;
-      text-align:center;
-      position:relative;
-    }
-    header:before{
-      content:"";
-      position:absolute;
-      inset: -60px -60px auto -60px;
-      height: 180px;
-      background:
-        radial-gradient(circle at 20% 30%, rgba(242,140,40,0.35), transparent 60%),
-        radial-gradient(circle at 80% 40%, rgba(43,99,181,0.35), transparent 60%);
-      transform: rotate(-2deg);
-      filter: blur(1px);
-    }
-    .brand{
-      position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:12px;
-      margin-bottom: 10px;
-    }
-    .logo{
-      width:54px;
-      height:54px;
-      border-radius:18px;
-      background: linear-gradient(135deg, var(--orange), var(--blue));
-      display:grid;
-      place-items:center;
-      color:#fff;
-      font-family: Montserrat, Inter, sans-serif;
-      font-weight: 800;
-      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.18);
-      overflow:hidden;
-      flex: 0 0 auto;
-    }
-    /* Si tu veux mettre un vrai logo, décommente l'image ci-dessous */
-    /* .logo img{ width:100%; height:100%; object-fit:cover; display:block; } */
+<style>
+:root{
+  --localeo-blue:#1E4C8A;
+  --localeo-blue-light:#4F78B6;
+  --localeo-orange:#F28C28;
+  --localeo-gold:#E5A823;
+  --localeo-bg:#F6F2E8;
+  --ink:#0F172A;
+  --muted:#475569;
+  --border:rgba(30, 76, 138, 0.18);
+  --shadow:0 18px 48px rgba(2, 6, 23, 0.18);
+}
 
-    .name{
-      font-family: Montserrat, Inter, sans-serif;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      font-size: 34px;
-      line-height:1;
-    }
-    .name .eo{ color: var(--orange); }
+*{box-sizing:border-box}
 
-    .tagline{
-      position:relative;
-      margin: 0 auto;
-      max-width: 520px;
-      font-family: Montserrat, Inter, sans-serif;
-      font-weight: 800;
-      letter-spacing: -0.4px;
-      font-size: clamp(18px, 2.4vw, 24px);
-      line-height: 1.2;
-    }
-    .tagline .accent{ color: var(--orange); }
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:
+    radial-gradient(900px 420px at 15% 10%, rgba(242,140,40,0.25), transparent 60%),
+    radial-gradient(900px 420px at 85% 0%, rgba(79,120,182,0.28), transparent 58%),
+    linear-gradient(180deg, #ffffff 0%, var(--localeo-bg) 55%, #ffffff 100%);
+  color:var(--ink);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  padding:24px;
+}
 
-    main{
-      padding: 18px 22px 24px;
-      display:flex;
-      flex-direction:column;
-      gap: 12px;
-    }
-    .btn{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      background:#fff;
-      text-decoration:none;
-      font-weight: 700;
-      color: var(--ink);
-      transition: transform .05s ease, box-shadow .2s ease, border-color .2s ease;
-    }
-    .btn:active{ transform: translateY(1px); }
-    .btn:hover{
-      box-shadow: 0 14px 28px rgba(2, 6, 23, 0.10);
-      border-color: rgba(43,99,181,0.35);
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, var(--blue), var(--blue2));
-      color:#fff;
-      border-color: transparent;
-    }
-    .btn.primary:hover{
-      box-shadow: 0 16px 30px rgba(30, 76, 138, 0.28);
-    }
-    .hint{
-      text-align:center;
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 6px;
-    }
-    .arrow{ opacity: .9; }
-  </style>
+.container{
+  width:100%;
+  max-width:900px;
+}
+
+.card{
+  background:rgba(255,255,255,0.86);
+  border:1px solid var(--border);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.header{
+  padding:38px 22px 26px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 20% 40%, rgba(242,140,40,0.30), transparent 62%),
+    radial-gradient(circle at 80% 30%, rgba(79,120,182,0.30), transparent 62%),
+    linear-gradient(135deg, rgba(79,120,182,0.25), rgba(30,76,138,0.55));
+  color:#fff;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin-bottom:10px;
+}
+
+.logoBox{
+  width:54px;
+  height:54px;
+  border-radius:18px;
+  background:linear-gradient(135deg, var(--localeo-orange), var(--localeo-blue));
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  box-shadow:0 16px 30px rgba(15, 23, 42, 0.22);
+}
+
+.name{
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  letter-spacing:-0.6px;
+  font-size:40px;
+  line-height:1;
+}
+
+.name .eo{ color:var(--localeo-orange); }
+
+.tagline{
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  font-size:clamp(20px, 2.7vw, 28px);
+  margin:10px auto 12px;
+  line-height:1.15;
+  max-width:720px;
+}
+
+.tagline .accent{ color:var(--localeo-orange); }
+
+.pitch{
+  margin:0 auto;
+  max-width:760px;
+  font-size:16px;
+  line-height:1.55;
+  opacity:0.95;
+}
+
+.content{
+  padding:22px;
+  display:grid;
+  gap:18px;
+}
+
+.section{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:18px;
+}
+
+.section h2{
+  margin:0 0 10px;
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  color:var(--localeo-blue);
+  letter-spacing:-0.3px;
+  font-size:18px;
+}
+
+.bullets{
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+  line-height:1.55;
+}
+
+.bullets li{
+  margin:8px 0;
+}
+
+.steps{
+  display:grid;
+  gap:10px;
+  margin-top:6px;
+}
+
+.step{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  color:var(--muted);
+  line-height:1.45;
+}
+
+.badge{
+  width:26px;
+  height:26px;
+  border-radius:999px;
+  background:rgba(229,168,35,0.18);
+  border:1px solid rgba(229,168,35,0.35);
+  color:#8A5A12;
+  display:grid;
+  place-items:center;
+  font-weight:800;
+  flex:0 0 auto;
+}
+
+.links{
+  display:grid;
+  gap:12px;
+  margin-top:2px;
+}
+
+.button{
+  text-decoration:none;
+  padding:14px 16px;
+  border-radius:14px;
+  font-weight:800;
+  font-size:16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  border:1px solid rgba(30,76,138,0.20);
+  background:#fff;
+  color:var(--ink);
+  transition:0.2s;
+}
+
+.button.primary{
+  background:linear-gradient(135deg, var(--localeo-blue), var(--localeo-blue-light));
+  border:0;
+  color:#fff;
+  box-shadow:0 18px 34px rgba(30, 76, 138, 0.22);
+}
+
+.button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 22px rgba(2,6,23,0.12);
+}
+
+.arrow{opacity:.9; font-size:18px;}
+
+.footer{
+  text-align:center;
+  padding:14px 22px 20px;
+  color:var(--muted);
+  font-size:12px;
+}
+</style>
 </head>
 
 <body>
+<div class="container">
   <div class="card">
-    <header>
+
+    <div class="header">
       <div class="brand">
-        <div class="logo" aria-label="Logo Localeo">
-          <!-- Option simple: lettre -->
-          L
-
-          <!-- Option image: place ton logo dans /docs/assets/logo.png et décommente :
-          <img src="./assets/logo.png" alt="Localeo" />
-          -->
-        </div>
-
+        <div class="logoBox">L</div>
         <div class="name">Local<span class="eo">eo</span></div>
       </div>
 
-      <p class="tagline">
+      <div class="tagline">
         Attirez de <span class="accent">nouveaux clients</span><br>
-        dans votre commerce.
+        dans votre commerce
+      </div>
+
+      <p class="pitch">
+        Localeo incite les habitants à consommer dans les commerces de leur commune
+        grâce à des packs de prestations locales.<br><br>
+        <strong>Et si votre prochain client était déjà dans votre commune ?</strong><br>
+        Localeo l’aide à venir jusqu’à vous.
       </p>
-    </header>
+    </div>
 
-    <main>
-      <!-- Remplace les liens ci-dessous -->
-      <a class="btn primary" href="https://tally.so/r/Zj6NMy" target="_blank" rel="noopener">
-        Proposer une prestation (formulaire) <span class="arrow">→</span>
-      </a>
+    <div class="content">
 
-      <a class="btn" href="https://www.facebook.com/profile.php?id=61586409877177&locale=fr_FR" target="_blank" rel="noopener">
-        Suivre Localeo sur Facebook <span class="arrow">→</span>
-      </a>
+      <div class="section">
+        <h2>Pourquoi rejoindre Localeo ?</h2>
+        <ul class="bullets">
+          <li><strong>Attirez de nouveaux clients</strong> qui ne vous connaissaient pas encore.</li>
+          <li><strong>Valorisez une prestation dédiée</strong> (simple, claire, pensée pour la découverte).</li>
+          <li><strong>Optimisez vos heures les plus calmes</strong> en choisissant les créneaux où elle est valable.</li>
+          <li><strong>Sans abonnement, sans engagement</strong> : aucun frais fixe.</li>
+        </ul>
+      </div>
 
-      <a class="btn" href="mailto:contactlocaleo@gmail.com">
-        Nous contacter <span class="arrow">→</span>
-      </a>
+      <div class="section">
+        <h2>Comment ça fonctionne ?</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="badge">1</div>
+            <div>Vous définissez une <strong>prestation locale</strong> simple, adaptée à votre activité et à vos créneaux calmes.</div>
+          </div>
+          <div class="step">
+            <div class="badge">2</div>
+            <div>Nous l’<strong>associons dans un pack</strong> avec d’autres commerces de votre commune.</div>
+          </div>
+          <div class="step">
+            <div class="badge">3</div>
+            <div>Les habitants achètent le pack, viennent chez vous, et vous réalisez la prestation.</div>
+          </div>
+        </div>
+        <p style="margin:12px 0 0; color:var(--muted); font-weight:700;">
+          Simple. Clair. Sans contrainte.
+        </p>
+      </div>
 
-      <div class="hint">Simple • Local • Sans engagement</div>
-    </main>
+      <div class="links">
+        <!-- Remplace les liens ci-dessous -->
+        <a class="button primary" href="LIEN_FORMULAIRE" target="_blank" rel="noopener">
+          Proposer une prestation <span class="arrow">→</span>
+        </a>
+
+        <a class="button" href="LIEN_FACEBOOK" target="_blank" rel="noopener">
+          Suivre Localeo sur Facebook <span class="arrow">→</span>
+        </a>
+
+        <a class="button" href="mailto:EMAIL_CONTACT">
+          Nous contacter <span class="arrow">→</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      © <span id="y"></span> Localeo — Initiative locale
+    </div>
+
   </div>
+</div>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
+
