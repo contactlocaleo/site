@@ -4,440 +4,492 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7S7T0P3H5"></script>
   <title>Localeo</title>
-
+  <meta name="description"
+    content="Localeo incite les habitants à consommer dans les commerces de leur commune en leur proposant des packs de prestations locaux avantageux">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Cormorant+Garamond:wght@500;600;700&family=Caveat:wght@600;700&display=swap"
     rel="stylesheet">
-
-  <style>
-    @media (max-width:700px) {
-      .card {
-        border-radius: 0;
-      }
-
-      .container {
-        padding: 0;
-      }
-    }
-
-    :root {
-      --localeo-blue: #1E4C8A;
-      --localeo-blue-light: #4F78B6;
-      --localeo-orange: #F28C28;
-      --localeo-gold: #F28C28;
-      --localeo-bg: #F28C28;
-      --ink: #0F172A;
-      --muted: #475569;
-      --border: rgba(30, 76, 138, 0.18);
-      --shadow: 0 18px 48px rgba(2, 6, 23, 0.18);
-    }
-
-    * {
-      box-sizing: border-box
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background:
-        radial-gradient(circle at 20% 40%, rgba(30, 76, 138, 1), transparent 62%),
-        radial-gradient(circle at 80% 30%, rgba(30, 76, 138, 1), transparent 62%),
-        linear-gradient(135deg, rgba(242, 140, 40), rgba(30, 76, 138)) color:var(--ink);
-    }
-
-    .container {
-      width: 100%;
-      max-width: 900px;
-      margin: auto;
-      padding: 0px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.86);
-      border: 1px solid var(--border);
-      border-radius: 0px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .header {
-      padding: 38px 22px 26px;
-      text-align: center;
-      background:
-        radial-gradient(circle at 20% 40%, rgba(30, 76, 138, 0.2), transparent 62%),
-        radial-gradient(circle at 80% 30%, rgba(30, 76, 138, 0.8), transparent 62%),
-        linear-gradient(135deg, rgba(30, 76, 138, 0.25), rgba(30, 76, 138, 0.55));
-      color: #fff;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-
-    .logoBox {
-      width: 54px;
-      height: 54px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, var(--localeo-orange), var(--localeo-blue));
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.22);
-    }
-
-    .name {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      letter-spacing: -0.6px;
-      font-size: 40px;
-      line-height: 1;
-      color: var(--localeo-blue);
-    }
-
-    .name .eo {
-      color: var(--localeo-orange);
-    }
-
-    .tagline {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: clamp(20px, 2.7vw, 28px);
-      margin: 10px auto 12px;
-      line-height: 1.15;
-      max-width: 720px;
-    }
-
-    .tagline .accent {
-      color: var(--localeo-orange);
-    }
-
-    .pitch {
-      margin: 0 auto;
-      max-width: 760px;
-      font-size: 16px;
-      line-height: 1.55;
-      opacity: 0.95;
-    }
-
-    .content {
-      padding: 22px;
-      display: grid;
-      gap: 18px;
-    }
-
-    .section {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 18px;
-    }
-
-    .section h2 {
-      margin: 0 0 10px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      color: var(--localeo-blue);
-      letter-spacing: -0.3px;
-      font-size: 18px;
-    }
-
-    /* FAQ header toggle */
-    .faq-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-
-    .faq-toggle {
-      flex: 0 0 auto;
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(30, 76, 138, 0.18);
-      background: rgba(30, 76, 138, 0.04);
-      color: var(--localeo-blue);
-      cursor: pointer;
-    }
-
-    .faq-toggle:focus-visible {
-      outline: 3px solid rgba(242, 140, 40, 0.45);
-      outline-offset: 2px;
-    }
-
-    .faq-toggle-icon svg {
-      width: 18px;
-      height: 18px;
-      transition: transform .2s ease;
-    }
-
-    .faq-toggle[aria-expanded="false"] .faq-toggle-icon svg {
-      transform: rotate(-90deg);
-    }
-
-    #faq-zone[hidden] {
-      display: none;
-    }
-
-    .bullets {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-
-    .bullets li {
-      margin: 8px 0;
-    }
-
-    .steps {
-      display: grid;
-      gap: 10px;
-      margin-top: 6px;
-    }
-
-    .step {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      color: var(--muted);
-      line-height: 1.45;
-    }
-
-    .badge {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      background: rgba(242, 140, 40, 0.18);
-      border: 1px solid rgba(242, 140, 40, 0.35);
-      color: var(--localeo-orange);
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      flex: 0 0 auto;
-    }
-
-    .links {
-      display: grid;
-      gap: 12px;
-      margin-top: 2px;
-    }
-
-    .button {
-      text-decoration: none;
-      padding: 14px 16px;
-      border-radius: 14px;
-      font-weight: 800;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      border: 1px solid rgba(30, 76, 138, 0.20);
-      background: #fff;
-      color: var(--ink);
-      transition: 0.2s;
-    }
-
-    .button.primary {
-      background: linear-gradient(135deg, var(--localeo-blue), var(--localeo-blue-light));
-      border: 0;
-      color: #fff;
-      box-shadow: 0 18px 34px rgba(30, 76, 138, 0.22);
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 22px rgba(2, 6, 23, 0.12);
-    }
-
-    .arrow {
-      opacity: .9;
-      font-size: 18px;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 14px 22px 20px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .faq {
-      display: grid;
-      gap: 14px;
-      margin-top: 8px;
-    }
-
-    .faq-item {
-      background: #fff;
-      border: 1px solid rgba(30, 76, 138, 0.18);
-      border-radius: 14px;
-      padding: 14px;
-    }
-
-    .faq-item strong {
-      color: #1E4C8A;
-      display: block;
-      margin-bottom: 6px;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .faq-item p {
-      margin: 0;
-      color: #475569;
-      line-height: 1.5;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand-wrap">
+        <a class="brand brand-lockup" href="#top" aria-label="Localeo">
+          <img src="img/logo.png" alt="Symbole Localeo" class="brand-mark">
+          <span class="brand-wordmark">Local<span>eo</span></span>
+        </a>
+        <p class="brand-note">Une initiative locale pour dynamiser les commerces de proximité</p>
+      </div>
 
-      <div class="header">
-        <div class="brand">
-          <img src="./logo_site.png" alt="Localeo" style="height: 100px;" />
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav">
+        <a href="#projet">Le projet</a>
+        <a href="#terrain">Communes</a>
+        <a href="#commercants">Commerçants</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="header-cta">Je souhaite participer</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="hero-visual"></div>
+      <div class="hero-fade"></div>
+      <div class="container hero-shell">
+        <div class="hero-panel">
+          <p class="hero-kicker">Commerce local • communes • habitants</p>
+          <h1>Attirez des nouveaux clients</h1>
+          <p class="hero-text hero-text-authentic">
+            Localeo incite les habitants à consommer dans les commerces de leur commune grâce à des packs de prestations
+            locales</p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Je souhaite participer</a>
+            <a href="#projet" class="btn btn-secondary">Comment ça fonctionne ?</a>
+            <a href="#contact" class="btn btn-tertiary">Suivre l’avancement du projet</a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="tagline">
-          Attirez de <span class="accent">nouveaux clients</span><br>
-          dans votre commerce
+    <section id="projet" class="intro-wrap">
+      <div class="container">
+        <div class="intro-card">
+          <p class="intro-accent">Et si votre prochain client était dejà dans votre commune ? </p>
+          <p class="intro-accent">Localeo l'aide à venir jusqu'à vous</p>
         </div>
+      </div>
+    </section>
 
-        <p class="pitch">
-          Localeo incite les habitants à consommer dans les commerces de leur commune
-          grâce à des packs de prestations locales.<br>
+
+    <section class="stats-strip">
+      <div class="container stats-grid">
+        <article class="stat-box stat-inline">
+          <div class="indicator svg-indicator" aria-hidden="true">
+            <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 21h18"></path>
+              <path d="M5 21V10l7-5 7 5v11"></path>
+              <path d="M9 21v-6h6v6"></path>
+            </svg>
+          </div>
+          <div class="stat-copy">
+            <strong data-target="7">0</strong>
+            <span>communes rencontrées</span>
+          </div>
+        </article>
+
+        <article class="stat-box stat-inline">
+          <div class="indicator svg-indicator" aria-hidden="true">
+            <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 9l1-4h16l1 4"></path>
+              <path d="M5 9v10h14V9"></path>
+              <path d="M9 19v-6h6v6"></path>
+            </svg>
+          </div>
+          <div class="stat-copy">
+            <strong data-target="60">0</strong>
+            <span>commerces rencontrés</span>
+          </div>
+        </article>
+
+        <article class="stat-box stat-inline">
+          <div class="indicator svg-indicator" aria-hidden="true">
+            <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="8" width="18" height="13"></rect>
+              <path d="M12 8v13"></path>
+              <path d="M3 12h18"></path>
+              <path d="M12 8c-1.5-2-4-2-4 0h4z"></path>
+              <path d="M12 8c1.5-2 4-2 4 0h-4z"></path>
+            </svg>
+          </div>
+          <div class="stat-copy">
+            <strong data-target="3">0</strong>
+            <span>packs en préparation</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-copy">
+      <div class="container project-copy-inner">
+        <p class="project-copy-text">
+          Le projet avance au contact du terrain avec des échanges concrets, des retours commerçants et une construction
+          progressive des premières offres locales.
         </p>
       </div>
+    </section>
 
-      <div class="content">
 
-        <div class="section">
-          <h2>Pourquoi rejoindre Localeo ?</h2>
-          <ul class="bullets">
-            <li><strong>Attirez de nouveaux clients</strong> qui ne vous connaissaient pas encore.</li>
-            <li><strong>Valorisez une prestation dédiée</strong> (simple, claire, pensée pour la découverte).</li>
-            <li><strong>Optimisez vos heures les plus calmes</strong> en choisissant les créneaux où elle est valable.
-            </li>
-            <li><strong>Sans abonnement, sans engagement</strong> : aucun frais fixe.</li>
-          </ul>
-        </div>
 
-        <div class="section">
-          <h2>Comment ça fonctionne ?</h2>
-          <div class="steps">
-            <div class="step">
-              <div class="badge">1</div>
-              <div>Vous définissez une <strong>prestation locale</strong> simple, adaptée à votre activité et à vos
-                créneaux calmes.</div>
-            </div>
-            <div class="step">
-              <div class="badge">2</div>
-              <div>Nous l’<strong>associons dans un pack</strong> avec d’autres commerces de votre commune.</div>
-            </div>
-            <div class="step">
-              <div class="badge">3</div>
-              <div>Les habitants achètent le pack, viennent chez vous, et vous réalisez la prestation.</div>
-            </div>
-          </div>
-          <p style="margin:12px 0 0; color:var(--muted); font-weight:700;">
-            Simple. Clair. Sans contrainte.
-          </p>
-        </div>
-        <div class="links">
-          <!-- Remplace les liens ci-dessous -->
-          <a class="button primary" href="https://tally.so/r/Zj6NMy" target="_blank" rel="noopener">
-            Proposer nous une prestation<span class="arrow">→</span>
-          </a>
-          <a class="button" href="https://tally.so/r/5Bk42E" target="_blank" rel="noopener">
-            Je suis interessé(e) <span class="arrow">→</span>
-          </a>
-          <a class="button" href="https://www.facebook.com/profile.php?id=61586409877177&locale=fr_FR" target="_blank"
-            rel="noopener">
-            Suivre Localeo sur Facebook <span class="arrow">→</span>
-          </a>
-          <a class="button" href="mailto:contactlocaleo@gmail.com">
-            Nous contacter <span class="arrow">→</span>
-          </a>
-        </div>
-
-        <div class="section">
-          <div class="faq-header">
-            <h2 style="margin:0;">Questions fréquentes</h2>
-            <button class="faq-toggle" type="button" aria-expanded="true" aria-controls="faq-zone"
-              title="Plier / déplier">
-              <span class="faq-toggle-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </span>
-            </button>
-          </div>
-          <div class="faq" id="faq-zone">
-            <div class="faq-item">
-              <strong>Est-ce que cela coûte quelque chose pour participer ?</strong>
-              <p>
-                Non. Rejoindre Localeo est gratuit et sans engagement.
-                Vous proposez simplement une prestation dédiée qui pourra être intégrée dans un pack local.
-              </p>
-            </div>
-            <div class="faq-item">
-              <strong>Quand suis-je rémunéré ?</strong>
-              <p>
-                Lorsqu’un client utilise son pack dans votre commerce, vous réalisez la prestation
-                et Localeo vous reverse le montant prévu pour celle-ci.
-              </p>
-            </div>
-          </div>
+    <section class="terrain-proof">
+      <div class="container">
+        <h2>Nous échangeons avec vous</h2>
+        <div class="commerce-list">
+          <span>Boulangeries</span>
+          <span>Poissonneries</span>
+          <span>Fromagers</span>
+          <span>Primeurs</span>
+          <span>Coiffeurs</span>
+          <span>Chocolateries</span>
+          <span>Salons d'Esthétique</span>
+          <span>Salons de thé</span>
+          <span>Fleuristes</span>
+          <span>Cavistes</span>
+          <span>Pizzérias</span>
+          <span>Petites alimentation</span>
+          <span>Torréfacteurs</span>
         </div>
       </div>
+    </section>
 
-      <div class="footer">
-        © <span id="y"></span> Localeo — Initiative locale
+    <section id="terrain" class="terrain">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Côté Terrain</h2>
+        </div>
+
+        <div class="city-grid">
+          <article class="city-card city-card-premium">
+            <div class="city-image">
+              <img src="img/cities/carbon-blanc.webp" alt="Carbon-Blanc" loading="lazy">
+              <div class="city-overlay"></div>
+            </div>
+            <div class="city-content">
+              <h3>Carbon-Blanc</h3>
+              <p class="city-status active">● Échanges en cours</p>
+              <div class="city-metrics">
+                <span>15 commerces vus</span>
+                <span>7 intéressés</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="city-card city-card-premium">
+            <div class="city-image">
+              <img src="img/cities/saint-andre.webp" alt="Saint-André-de-Cubzac" loading="lazy">
+              <div class="city-overlay"></div>
+            </div>
+            <div class="city-content">
+              <h3>Saint-André-de-Cubzac</h3>
+              <p class="city-status active">● Échanges en cours</p>
+              <div class="city-metrics">
+                <span>18 commerces vus</span>
+                <span>9 intéressés</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="city-card city-card-premium">
+            <div class="city-image">
+              <img src="img/cities/carignan.webp" alt="Carignan" loading="lazy">
+              <div class="city-overlay"></div>
+            </div>
+            <div class="city-content">
+              <h3>Latresne</h3>
+              <p class="city-status active">● Packs en cours d'élaboration</p>
+              <div class="city-metrics">
+                <span>10 commerces vus</span>
+                <span>4 intéressés</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="city-card city-card-premium">
+            <div class="city-image">
+              <img src="img/cities/saint-loubes.webp" alt="Saint-Loubès" loading="lazy">
+              <div class="city-overlay"></div>
+            </div>
+            <div class="city-content">
+              <h3>Carignan</h3>
+              <p class="city-status active">● Échanges en cours</p>
+              <div class="city-metrics">
+                <span>4 commerces vus</span>
+                <span>2 intéressés</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="city-lists cards-view">
+          <article class="city-list-card">
+            <h4>Nous échangeaons aussi avec ces communes</h4>
+            <div class="city-chip-list">
+              <span class="city-chip">Tresses</span>
+              <span class="city-chip">Fargues Saint Hilaire</span>
+              <span class="city-chip">Bassens</span>
+              <span class="city-chip">Saint Caprais de Bordeaux</span>
+              <span class="city-chip">Cénac</span>
+            </div>
+          </article>
+
+          <article class="city-list-card">
+            <h4>Communes à venir</h4>
+            <div class="city-chip-list">
+              <span class="city-chip">Artigues près Bordeaux</span>
+              <span class="city-chip">Yvrac</span>
+              <span class="city-chip">Montussan</span>
+              <span class="city-chip">Pompignac</span>
+              <span class="city-chip">Bouliac</span>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
+    <!--
+    <section class="pillars">
+      <div class="container pillars-grid">
+        <article class="pillar-card">
+          <div class="pillar-head">
+            <span class="pillar-icon svg-pill" aria-hidden="true">
+              <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"></path>
+                <circle cx="12" cy="12" r="2.5"></circle>
+              </svg>
+            </span>
+            <h3>Plus de visibilité locale</h3>
+          </div>
+          <p>Des offres plus lisibles, plus relayables et plus visibles auprès des habitants.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-head">
+            <span class="pillar-icon svg-pill" aria-hidden="true">
+              <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 8h-2a4 4 0 0 0 0 8h2"></path>
+                <path d="M16 8h2a4 4 0 0 1 0 8h-2"></path>
+                <path d="M8 12h8"></path>
+              </svg>
+            </span>
+            <h3>Des packs mutualisés</h3>
+          </div>
+          <p>Une logique collective qui permet aux commerçants de proposer davantage ensemble.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-head">
+            <span class="pillar-icon svg-pill" aria-hidden="true">
+              <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="5" r="2"></circle>
+                <circle cx="5" cy="19" r="2"></circle>
+                <circle cx="19" cy="19" r="2"></circle>
+                <path d="M12 7v4"></path>
+                <path d="M12 11 6.5 17"></path>
+                <path d="M12 11 17.5 17"></path>
+              </svg>
+            </span>
+            <h3>Activation du territoire</h3>
+          </div>
+          <p>Une dynamique concrète qui relie habitants, commerces de proximité et communes.</p>
+        </article>
+      </div>
+    </section>
+    -->
+    <section id="commercants" class="merchant-panel">
+      <div class="merchant-image"></div>
+      <div class="merchant-overlay-bg"></div>
+      <div class="container merchant-top">
+        <p class="merchant-title">Côté <span>commerçants</span></p>
+        <p class="merchant-intro">Localeo veut inciter les habitants à consommer local en mettant en avant votre talent
+          et votre savoir faire grace à des packs locaux.</p>
+        <p class="merchant-intro">Pourquoi rejoindre l'aventure ?</p>
+        <div class="merchant-benefits">
+          <span>Valoriser une pretation dédiée</span>
+          <span>Optimiser vos heures les plus calmes</span>
+          <span>Sans abonnement, Sans engament</span>
+        </div>
+
+        <div class="steps linked-steps">
+          <article class="step-card active">
+            <span class="step-dot"></span>
+            <div>
+              <h4>Étape 1 — Vous nous proposé votre prestation</h4>
+              <p>Vous définissez votre prestation découverte Localeo et nous la validons ensemble.</p>
+            </div>
+          </article>
+          <article class="step-card">
+            <span class="step-dot"></span>
+            <div>
+              <h4>Étape 2 — Nous l'incluons dans l'un des pack de votre commune</h4>
+              <p>Nous concevons des packs réunissant des activités complémentaires pour encourager la découverte des
+                commerces locaux.</p>
+            </div>
+          </article>
+          <article class="step-card">
+            <span class="step-dot"></span>
+            <div>
+              <h4>Étape 3 — Nous nous chargeons de la promotion et de la commercialisation des packs </h4>
+              <p>Localeo se charge de promouvoir et de diffuser les packs auprès des collectivités,des associations, des
+                entreprises locales et des habitants de la communune.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="merchant-cta-row">
+          <p>Prêt à rejoindre l’aventure Localeo ?</p>
+          <a href="#contact" class="btn btn-primary">Je souhaite participer</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <div class="container faq-wrap">
+        <h3>FAQ commerçants</h3>
+
+        <details open>
+          <summary>Est-ce que participer coûte quelque chose ?</summary>
+          <p>Non. Rejoindre Localeo est gratuit et sans engagement. Vous proposez simplement une prestation dédiée qui
+            pourra être intégrée dans un pack local.</p>
+        </details>
+
+        <details>
+          <summary>Combien de commerces participent à un pack ?</summary>
+          <p>Le nombre dépend de la commune, des complémentarités identifiées et de la cohérence de l’offre proposée aux
+            habitants.</p>
+        </details>
+
+        <details>
+          <summary>Puis-je proposer une idée d’offre ?</summary>
+          <p>Oui. Les retours commerçants sont justement au cœur de la construction des premières offres locales.</p>
+        </details>
+
+        <details>
+          <summary>Dois-je m’engager immédiatement ?</summary>
+          <p>Il n'y a a pas de frais d'enganement et ni abonnement. Cependant les packs commercialisés doivent être
+            honorés</p>
+        </details>
+
+        <details>
+          <summary>Ou peut-on acheter les packs ?</summary>
+          <p>Les packs sont entièrement digitaux et disponibles via la plateforme Localeo</p>
+        </details>
+
+        <details>
+          <summary>Comment le client consomme son pack</summary>
+          <p>Une fois un pack acheté depuis la plateforme, le client recoit une QRCode unique qu'il vient présenter chez
+            vous pour retirer ou exécuter sa prestation. Vous le scanner et c'est tout.</p>
+        </details>
+
+        <details>
+          <summary>Comment suis rémunéré ?</summary>
+          <p>Localeo vous reverse le montant correspondant aux prestations réalisées le 15 ou 30 du mois.</p>
+        </details>
+
+        <details>
+          <summary>Le pack a t'il une durée de validité</summary>
+          <p>Oui, l'idée est de créer l'envie et de consommer rapidement dans un délai de 3 mois </p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-wrap">
+        <h3>Contact</h3>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:contact@localeo.fr">
+            <span class="contact-mark svg-contact" aria-hidden="true">
+              <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="8" r="3"></circle>
+                <path d="M5 20c1.5-3 4-4.5 7-4.5s5.5 1.5 7 4.5"></path>
+              </svg>
+            </span>
+            <div>
+              <strong>Prendre contact</strong>
+              <div class="contact-details">
+                <div class="contact-line">
+                  <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="M3 7l9 6 9-6"></path>
+                  </svg>
+                  <span>contactlocaleo@gmail.com</span>
+                </div>
+                <div class="contact-line">
+                  <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2L8.2 9.3a16 16 0 0 0 6.5 6.5l1-1.1a2 2 0 0 1 2-.5c.8.3 1.7.6 2.6.7A2 2 0 0 1 22 16.9z">
+                    </path>
+                  </svg>
+                  <span>07 80 37 67 51</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="contact-card" href="https://www.facebook.com/profile.php?id=61586409877177&locale=fr_FR" target="_new">
+            <span class="contact-mark svg-contact" aria-hidden="true">
+              <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8h3"></path>
+                <path d="M15 4h-1a4 4 0 0 0-4 4v3H7v4h3v5"></path>
+              </svg>
+            </span>
+            <div>
+              <strong>Suivre le projet</strong>
+              <span>Voir les avancées sur Facebook</span>
+            </div>
+          </a>
+          <a class="contact-card" href="https://tally.so/r/5Bk42E" target="_new">
+            <span class="contact-mark svg-contact" aria-hidden="true">
+              <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="5" y="3" width="14" height="18" rx="2"></rect>
+                <path d="M8 8h8"></path>
+                <path d="M8 12h8"></path>
+                <path d="M8 16h5"></path>
+              </svg>
+            </span>
+            <div>
+              <strong>Formulaire de contact</strong>
+              <span>Poser une question ou être recontacté</span>
+            </div>
+          </a>
+          <a class="contact-card" href="https://tally.so/r/Zj6NMy" target="_new">
+            <span class="contact-mark svg-contact" aria-hidden="true">
+              <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="8" width="18" height="13"></rect>
+                <path d="M12 8v13"></path>
+                <path d="M3 12h18"></path>
+                <path d="M12 8c-1.5-2-4-2-4 0h4z"></path>
+                <path d="M12 8c1.5-2 4-2 4 0h-4z"></path>
+              </svg>
+            </span>
+            <div>
+              <strong>Proposer un pack</strong>
+              <span>Suggérer une offre locale ou un partenariat</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+  <script src="script.js"></script>
+
+
+
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p class="footer-quote">
+        Chez Localeo, la proximité n'est pas un discours.<br>
+      </p>
+      <p class="footer-signature">
+        Localeo · 2026
+      </p>
     </div>
-  </div>
+  </footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    // Toggle whole FAQ zone
-    const faqToggle = document.querySelector('.faq-toggle');
-    const faqZoneId = faqToggle?.getAttribute('aria-controls');
-    const faqZone = faqZoneId ? document.getElementById(faqZoneId) : null;
-
-    if (faqToggle && faqZone) {
-      faqToggle.addEventListener('click', () => {
-        const isExpanded = faqToggle.getAttribute('aria-expanded') === 'true';
-        faqToggle.setAttribute('aria-expanded', String(!isExpanded));
-
-        if (isExpanded) {
-          faqZone.setAttribute('hidden', '');
-        } else {
-          faqZone.removeAttribute('hidden');
-        }
-      });
-    }
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-S7S7T0P3H5');
-  </script>
 </body>
 
 </html>
