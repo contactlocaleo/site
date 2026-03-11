@@ -8,7 +8,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-S7S7T0P3H5');
   </script>
   <meta charset="UTF-8">
@@ -40,14 +39,14 @@
       </button>
 
       <nav id="site-nav" class="site-nav">
-        <a href="#projet">Le projet</a>
-        <a href="#terrain">Communes</a>
-        <a href="#commercants">Commerçants</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <a href="#projet" onclick="gtag('event','click_int_projet');">Le projet</a>
+        <a href="#terrain" onclick="gtag('event','click_int_terrain');">Communes</a>
+        <a href="#commercants" onclick="gtag('event','click_int_commercants');">Commerçants</a>
+        <a href="#faq"onclick="gtag('event','click_int_faq');">FAQ</a>
+        <a href="#contact" onclick="gtag('event','click_int_contact');">Contact</a>
       </nav>
 
-      <a href="#contact" class="header-cta">Je souhaite participer</a>
+      <a href="#contact" class="header-cta" onclick="gtag('event','click_int_je_souhaite_participer');">Je souhaite participer</a>
     </div>
   </header>
 
@@ -65,9 +64,9 @@
             locales</p>
 
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Je souhaite participer</a>
-            <a href="#projet" class="btn btn-secondary">Comment ça fonctionne ?</a>
-            <a href="#contact" class="btn btn-tertiary">Suivre l’avancement du projet</a>
+            <a href="#contact" class="btn btn-primary" onclick="gtag('event','click_int_je_souhaite_participer');">Je souhaite participer</a>
+            <a href="#projet" class="btn btn-secondary" onclick="gtag('event','click_int_comment_ca_fonctionne');">Comment ça fonctionne ?</a>
+            <a href="#contact" class="btn btn-tertiary" onclick="gtag('event','click_int_suivre_avancement');">Suivre l’avancement du projet</a>
           </div>
         </div>
       </div>
@@ -347,7 +346,7 @@
 
         <div class="merchant-cta-row">
           <p>Prêt à rejoindre l’aventure Localeo ?</p>
-          <a href="#contact" class="btn btn-primary">Je souhaite participer</a>
+          <a href="#contact" class="btn btn-primary" onclick="gtag('event','click_int_je_souhaite_participer');">Je souhaite participer</a>
         </div>
       </div>
     </section>
@@ -406,7 +405,7 @@
       <div class="container contact-wrap">
         <h3>Contact</h3>
         <div class="contact-grid">
-          <a class="contact-card" href="mailto:contact@localeo.fr">
+          <a class="contact-card" href="mailto:contact@localeo.fr" onclick="gtag('event','click_ext_contact');">
             <span class="contact-mark svg-contact" aria-hidden="true">
               <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
                 <circle cx="12" cy="8" r="3"></circle>
@@ -434,7 +433,7 @@
               </div>
             </div>
           </a>
-          <a class="contact-card" href="https://www.facebook.com/profile.php?id=61586409877177&locale=fr_FR" target="_new">
+          <a class="contact-card" href="https://www.facebook.com/profile.php?id=61586409877177&locale=fr_FR" target="_new" onclick="gtag('event','click_ext_facebook');">
             <span class="contact-mark svg-contact" aria-hidden="true">
               <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M14 8h3"></path>
@@ -446,7 +445,7 @@
               <span>Voir les avancées sur Facebook</span>
             </div>
           </a>
-          <a class="contact-card" href="https://tally.so/r/5Bk42E" target="_new">
+          <a class="contact-card" href="https://tally.so/r/5Bk42E" target="_new" onclick="gtag('event','click_ext_demande_recontact');">
             <span class="contact-mark svg-contact" aria-hidden="true">
               <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="5" y="3" width="14" height="18" rx="2"></rect>
@@ -460,7 +459,7 @@
               <span>Poser une question ou être recontacté</span>
             </div>
           </a>
-          <a class="contact-card" href="https://tally.so/r/Zj6NMy" target="_new">
+          <a class="contact-card" href="https://tally.so/r/Zj6NMy" target="_new" onclick="gtag('event','click_ext_proposition_offre');">
             <span class="contact-mark svg-contact" aria-hidden="true">
               <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="3" y="8" width="18" height="13"></rect>
