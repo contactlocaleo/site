@@ -158,6 +158,15 @@ a {
   background: var(--blue-900)
 }
 
+.hero-launch{
+  border:none;
+  margin: 0;
+  font-size: clamp(1.5rem, 1.5vw, 1.5rem);
+  line-height: 1;
+  font-weight: 300;
+  white-space: nowrap
+}
+
 .hero-visual,
 .hero-fade,
 .merchant-image,
@@ -167,7 +176,7 @@ a {
 }
 
 .hero-visual {
-  background: url("img/hero-v27.png") center/cover no-repeat;
+  background: url("img/hero-v27.webp") center/cover no-repeat;
   filter: brightness(.78) contrast(1.05)
 }
 
@@ -565,7 +574,7 @@ a {
 }
 
 .merchant-image {
-  background: url("img/footer-v27.png") center/cover no-repeat;
+  background: url("img/footer-v27.webp") center/cover no-repeat;
   filter: brightness(.82)
 }
 
@@ -1656,7 +1665,7 @@ body {
 }
 
 .hero-visual {
-  background: url("img/hero-v27.png") center/cover no-repeat;
+  background: url("img/hero-v27.webp") center/cover no-repeat;
   filter: brightness(.82) contrast(1.02) saturate(.95);
 }
 
@@ -2214,12 +2223,12 @@ body {
 }
 
 .merchant-image {
-  background: url("img/footer-v27.png") center/cover no-repeat;
+  background: url("img/footer-v27.webp") center/cover no-repeat;
   filter: brightness(.68) contrast(1.02) saturate(.94);
 }
 
 .footer-image {
-  background: url("img/footer-v27.png") center/cover no-repeat;
+  background: url("img/footer-v27.webp") center/cover no-repeat;
   filter: brightness(.72) contrast(1.02) saturate(.95);
 }
 
@@ -2414,3 +2423,4 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
