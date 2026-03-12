@@ -21,6 +21,11 @@
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Cormorant+Garamond:wght@500;600;700&family=Caveat:wght@600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+<link rel="shortcut icon" href="favicon.ico">
+
 </head>
 
 <body>
@@ -28,7 +33,7 @@
     <div class="container header-row">
       <div class="brand-wrap">
         <a class="brand brand-lockup" href="#top" aria-label="Localeo">
-          <img src="img/logo.webp" alt="Symbole Localeo" class="brand-mark">
+          <img src="img/logo.png" alt="Symbole Localeo" class="brand-mark">
           <span class="brand-wordmark">Local<span>eo</span></span>
         </a>
         <p class="brand-note">Une initiative locale pour dynamiser les commerces de proximité</p>
@@ -42,6 +47,7 @@
         <a href="#projet" onclick="gtag('event','click_int_projet');">Le projet</a>
         <a href="#terrain" onclick="gtag('event','click_int_terrain');">Communes</a>
         <a href="#commercants" onclick="gtag('event','click_int_commercants');">Commerçants</a>
+        <a href="#packs" onclick="gtag('event','click_int_packs');">Packs</a>
         <a href="#faq"onclick="gtag('event','click_int_faq');">FAQ</a>
         <a href="#contact" onclick="gtag('event','click_int_contact');">Contact</a>
       </nav>
@@ -57,17 +63,11 @@
       <div class="hero-fade"></div>
       <div class="container hero-shell">
         <div class="hero-panel">
+          <div class="hero-launch">🚀 Projet en lancement</div>
           <p class="hero-kicker">Commerces locaux • communes • habitants</p>
-          
-          <div class="hero-launch">
-            🚀 Projet en <strong>lancement</strong> 
-          </div>
-
-          <h1>Attirez des nouveaux clients</h1>
+          <h1>Attirez plus de clients<br>dans votre commerce</h1>
           <p class="hero-text hero-text-authentic">
-            Localeo incite les habitants à consommer dans les commerces de leur commune grâce à des packs de prestations
-            locales</p>
-
+            Localeo incite les habitants à consommer dans les commerces de leur commune grâce à des packs de prestations locales</p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary" onclick="gtag('event','click_int_je_souhaite_participer');">Je souhaite participer</a>
             <a href="#projet" class="btn btn-secondary" onclick="gtag('event','click_int_comment_ca_fonctionne');">Comment ça fonctionne ?</a>
@@ -168,10 +168,104 @@
       </div>
     </section>
 
+
+    <section class="packs-section" id="packs">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <h2>Des packs pour découvrir les commerces de la commune</h2>
+          <p class="packs-intro">
+            Chaque pack associe plusieurs commerces complémentaires pour donner envie aux habitants
+            de découvrir de nouvelles adresses locales.
+          </p>
+        </div>
+
+        <div class="packs-grid">
+          <article class="pack-card">
+            <div class="pack-card__media"><img src="img/packs/pack-bien-etre.webp" alt="Illustration du Pack Bien-être" loading="lazy"></div>
+            <div class="pack-card__body">
+              <div class="pack-badge">BIEN-ÊTRE</div>
+              <h3>Pack Bien-être</h3>
+              <p class="pack-types">Coiffeur • Esthétique • Massage</p>
+              <p class="pack-card__lead">Un parcours bien-être pour prendre soin de soi tout en découvrant les professionnels locaux.</p>
+              <p class="pack-purpose">Idéal pour se faire plaisir et découvrir de nouvelles adresses de la commune.</p>
+            </div>
+          </article>
+
+          <article class="pack-card">
+            <div class="pack-card__media"><img src="img/packs/pack-gourmand.webp" alt="Illustration du Pack Gourmand" loading="lazy"></div>
+            <div class="pack-card__body">
+              <div class="pack-badge">GOURMAND</div>
+              <h3>Pack Gourmand</h3>
+              <p class="pack-types">Caviste • Fromager • Primeur • Marchand de thé • Torréfacteur</p>
+              <p class="pack-card__lead">Un pack pour les amateurs de bons produits et de découvertes gourmandes.</p>
+              <p class="pack-purpose">Parfait pour découvrir le savoir faire locale et suciter l'envie.</p>
+            </div>
+          </article>
+
+          <article class="pack-card">
+            <div class="pack-card__media"><img src="img/packs/pack-saveurs-locales.webp" alt="Illustration du Pack Saveurs Locales" loading="lazy"></div>
+            <div class="pack-card__body">
+              <div class="pack-badge">SAVEURS LOCALES</div>
+              <h3>Pack Saveurs Locales</h3>
+              <p class="pack-types">Restaurant • Pizzeria • Sushi • Bistrot • Bar</p>
+              <p class="pack-card__lead">Une invitation à découvrir les lieux où l’on se retrouve pour manger et partager.</p>
+              <p class="pack-purpose">Pensé pour faire connaître plusieurs adresses conviviales d’une même commune.</p>
+            </div>
+          </article>
+
+          <article class="pack-card">
+            <div class="pack-card__media"><img src="img/packs/pack-malin.webp" alt="Illustration du Pack Malin" loading="lazy"></div>
+            <div class="pack-card__body">
+              <div class="pack-badge">MALIN</div>
+              <h3>Pack Malin</h3>
+              <p class="pack-types">Boulanger • Épicerie • Petite alimentation</p>
+              <p class="pack-card__lead">Un pack simple et pratique pour les achats du quotidien dans les commerces de proximité.</p>
+              <p class="pack-purpose">Utile pour créer du passage régulier et fidéliser une clientèle de proximité.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<div class="pack-concrete-example">
+  <h3>Exemple concret d’un pack</h3>
+  <p class="pack-concrete-intro">
+    Un pack permet aux habitants de découvrir plusieurs commerces de la commune
+    à travers une petite expérience chez chacun.
+  </p>
+
+  <div class="pack-concrete-grid">
+    <div class="pack-concrete-item">
+      <strong>🍷 Caviste</strong>
+      <span>Dégustation découverte</span>
+    </div>
+    <div class="pack-concrete-item">
+      <strong>🧀 Fromager</strong>
+      <span>Sélection artisanale</span>
+    </div>
+    <div class="pack-concrete-item">
+      <strong>🥕 Primeur</strong>
+      <span>Panier gourmand</span>
+    </div>
+    <div class="pack-concrete-item">
+      <strong>🍵 Marchand de thé</strong>
+      <span>Assortiment découverte</span>
+    </div>
+  </div>
+</div>
+
+
+
     <section id="terrain" class="terrain">
       <div class="container">
         <div class="section-heading">
           <h2>Côté Terrain</h2>
+
+        <div class="entre-deux-mers-line" aria-label="Zone de développement Localeo">
+          <span class="entre-pin" aria-hidden="true">📍</span>
+          <span>Localeo commence son développement dans les communes de l’Entre-deux-Mers.</span>
+        </div>
+
         </div>
 
         <div class="city-grid">
@@ -259,8 +353,15 @@
             </div>
           </article>
         </div>
+        
+
+</div>
+
       </div>
     </section>
+
+
+
 
     <!--
     <section class="pillars">
@@ -314,46 +415,57 @@
       <div class="merchant-overlay-bg"></div>
       <div class="container merchant-top">
         <p class="merchant-title">Côté <span>commerçants</span></p>
-        <p class="merchant-intro">Localeo veut inciter les habitants à consommer local en mettant en avant votre talent
-          et votre savoir faire grace à des packs locaux.</p>
-        <p class="merchant-intro">Pourquoi rejoindre l'aventure ?</p>
-        <div class="merchant-benefits">
-          <span>Valoriser une pretation dédiée</span>
-          <span>Optimiser vos heures les plus calmes</span>
-          <span>Sans abonnement, Sans engagement</span>
+        <p class="merchant-intro">Localeo construit des packs locaux avec les commerces de la commune pour donner envie aux habitants de découvrir plusieurs adresses locales.</p>
+
+        <div class="merchant-block">
+          <h3 class="merchant-block-title">Comment fonctionne un pack Localeo ?</h3>
+          <div class="steps linked-steps">
+            <article class="step-card active">
+              <span class="step-dot"></span>
+              <div>
+                <h4>Étape 1 — Rencontre des commerces</h4>
+                <p>Nous rencontrons les commerçants pour identifier les activités complémentaires et imaginer un pack cohérent à l’échelle de la commune.</p>
+              </div>
+            </article>
+            <article class="step-card">
+              <span class="step-dot"></span>
+              <div>
+                <h4>Étape 2 — Construction du pack</h4>
+                <p>Nous construisons un pack attractif qui associe plusieurs commerces locaux autour d’un même thème ou d’un même usage.</p>
+              </div>
+            </article>
+            <article class="step-card">
+              <span class="step-dot"></span>
+              <div>
+                <h4>Étape 3 — Promotion et diffusion</h4>
+                <p>Localeo se charge de promouvoir et de diffuser les packs auprès des collectivités, des associations, des comités d’entreprises, des entreprises locales et des habitants.</p>
+              </div>
+            </article>
+            <article class="step-card">
+              <span class="step-dot"></span>
+              <div>
+                <h4>Étape 4 — Découverte des commerces</h4>
+                <p>Les habitants utilisent le pack pour découvrir les commerces participants au fil de leurs visites et de leurs expériences locales.</p>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <div class="steps linked-steps">
-          <article class="step-card active">
-            <span class="step-dot"></span>
-            <div>
-              <h4>Étape 1 — Vous nous proposez votre prestation</h4>
-              <p>Vous définissez votre prestation découverte Localeo et nous la validons ensemble.</p>
-            </div>
-          </article>
-          <article class="step-card">
-            <span class="step-dot"></span>
-            <div>
-              <h4>Étape 2 — Nous l'incluons dans l'un des packs de votre commune</h4>
-              <p>Nous concevons des packs réunissant des activités complémentaires pour encourager la découverte des
-                commerces locaux.</p>
-            </div>
-          </article>
-          <article class="step-card">
-            <span class="step-dot"></span>
-            <div>
-              <h4>Étape 3 — Nous nous chargeons de la promotion des packs </h4>
-              <p>Localeo se charge de promouvoir et de diffuser les packs auprès des collectivités, des associations, des comités d'entreprises, des
-                entreprises locales et des habitants de la commune.</p>
-            </div>
-          </article>
+        <div class="merchant-block">
+          <h3 class="merchant-block-title">Pourquoi participer à un pack Localeo ?</h3>
+          <div class="merchant-benefits merchant-benefits--large">
+            <span>Attirer de nouveaux clients locaux</span>
+            <span>Faire découvrir votre commerce</span>
+            <span>Créer des synergies avec d’autres commerçants</span>
+            <span>Dynamiser le commerce de proximité</span>
+          </div>
         </div>
 
         <div class="merchant-cta-row">
           <p>Prêt à rejoindre l’aventure Localeo ?</p>
           <a href="#contact" class="btn btn-primary" onclick="gtag('event','click_int_je_souhaite_participer');">Je souhaite participer</a>
         </div>
-      </div>
+</div>
     </section>
 
     <section id="faq" class="faq-section">
