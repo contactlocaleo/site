@@ -2614,3 +2614,61 @@ color:#5f6e7a;
   margin-bottom:4px;
   color:#0b3d63;
 }
+
+
+/* ===== MENU MOBILE MODERNE ===== */
+
+@media (max-width:860px){
+
+.menu-toggle{
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+width:44px;
+height:44px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,.2);
+background:transparent;
+color:#fff;
+cursor:pointer;
+margin-left:auto;
+z-index:2000;
+}
+
+.site-nav{
+position:fixed;
+top:0;
+right:-280px;
+width:260px;
+height:100vh;
+display:flex;
+flex-direction:column;
+gap:6px;
+background:#0b3d63;
+padding:90px 16px 20px 16px;
+transition:right .3s ease;
+z-index:1500;
+}
+
+.site-nav.is-open{
+right:0;
+}
+
+.site-nav a{
+padding:14px 12px;
+border-radius:10px;
+color:#fff;
+text-decoration:none;
+font-weight:600;
+}
+
+.site-nav a:hover{
+background:rgba(255,255,255,.08);
+}
+
+}
+
+html,body{
+overflow-x:hidden;
+}
