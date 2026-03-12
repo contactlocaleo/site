@@ -159,12 +159,8 @@ a {
 }
 
 .hero-launch{
-  border:none;
   margin: 0;
-  font-size: clamp(1.5rem, 1.5vw, 1.5rem);
-  line-height: 1;
-  font-weight: 300;
-  white-space: nowrap
+  font-weight: 800;
 }
 
 .hero-visual,
