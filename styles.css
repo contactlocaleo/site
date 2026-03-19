@@ -2672,3 +2672,94 @@ background:rgba(255,255,255,.08);
 html,body{
 overflow-x:hidden;
 }
+
+
+/* ===== Mise en avant du caractère digital des packs ===== */
+.hero-digital-proof {
+  margin-top: 18px;
+  max-width: 760px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .22);
+  box-shadow: 0 18px 34px rgba(8, 40, 64, .18);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.hero-digital-proof strong {
+  color: #fff;
+}
+
+.hero-digital-proof span {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, .86);
+}
+
+.digital-explainer {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  gap: 18px;
+  align-items: start;
+  margin: 0 0 26px;
+  padding: 22px 24px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #fff8f1 0%, #ffffff 100%);
+  border: 1px solid rgba(242, 138, 46, .20);
+  box-shadow: var(--shadow);
+}
+
+.digital-explainer__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), #ef6c1d);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: .02em;
+}
+
+.digital-explainer__content h3 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  color: var(--blue-900);
+}
+
+.digital-explainer__content p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.digital-explainer__content ul {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.contact-digital-reminder {
+  margin: 0 0 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: #fff6ed;
+  border: 1px solid rgba(242, 138, 46, .18);
+  color: var(--blue-900);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 860px) {
+  .digital-explainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-digital-proof {
+    font-size: .96rem;
+  }
+}
