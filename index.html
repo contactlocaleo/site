@@ -15,6 +15,7 @@
   <title>Localeo</title>
   <meta name="description"
     content="Localeo aide les commerçants à attirer plus de clients localement grâce à des coffrets réunissant plusieurs commerces d’une même commune, bientôt disponibles sur une marketplace dédiée.">
+  <link rel="preload" as="image" href="img/hero-v27.png" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -29,11 +30,17 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#top">Aller au contenu</a>
+  <div class="launch-announcement" role="status" aria-label="Annonce d'ouverture">
+    <div class="container launch-announcement__inner">
+      <strong>Ouverture prochaine de la marketplace Localeo sur la commune pilote de Latresne, prévue début mai 2026.</strong>
+    </div>
+  </div>
   <header class="site-header">
     <div class="container header-row">
       <div class="brand-wrap">
         <a class="brand brand-lockup" href="#top" aria-label="Localeo">
-          <img src="img/logo.png" alt="Symbole Localeo" class="brand-mark">
+          <img src="img/logo.png" alt="Symbole Localeo" class="brand-mark" decoding="async" fetchpriority="high">
           <span class="brand-wordmark">Local<span>eo</span></span>
         </a>
         <p class="brand-note">Une initiative locale pour dynamiser les commerces de proximité</p>
@@ -43,7 +50,6 @@
 
       <nav id="site-nav" class="site-nav">
         <a href="#projet" onclick="gtag('event','click_int_projet');">Le projet</a>
-        <a href="#terrain" onclick="gtag('event','click_int_terrain');">Communes</a>
         <a href="#commercants" onclick="gtag('event','click_int_commercants');">Commerçants</a>
         <a href="#packs" onclick="gtag('event','click_int_packs');">Coffrets</a>
         <a href="#faq"onclick="gtag('event','click_int_faq');">FAQ</a>
@@ -62,39 +68,32 @@
       <div class="hero-fade"></div>
       <div class="container hero-shell">
         <div class="hero-panel">
-          <div class="hero-launch">🚀 Projet en lancement</div>
-          <p class="hero-kicker">Pour les commerçants de proximité qui veulent attirer davantage de clients localement</p>
-          <h1>Attirez plus de clients grâce à des coffrets réunissant plusieurs commerçants d’une même commune</h1>
+          <h1>Attirez plus de clients avec des coffrets locaux conçus entre commerçants de votre commune</h1>
           <p class="hero-text hero-text-authentic">
-            Localeo est en phase de lancement et construit ses premiers coffrets locaux avec des commerçants partenaires pour attirer plus de clients localement, y compris sur les heures creuses, avec un usage digital simple.</p>
+            Localeo aide les commerçants d’une même commune à réunir leurs offres dans des coffrets 100% digitaux, plus visibles, plus attractifs et plus simples à utiliser pour les habitants.</p>
           <div class="hero-highlights" aria-label="Points clés Localeo">
             <span>100% digital</span>
             <span>plus de passage local</span>
-            <span>offres mutualisées entre commerçants</span>
+            <span>validation simple par QR code</span>
           </div>
-          <p class="hero-proof">Commerçants partenaires recherchés pour les premiers coffrets.</p>
-          <p class="hero-proof">Première version du marketplace en préparation.</p>
+          <p class="hero-proof">Les premiers commerçants partenaires rejoignent actuellement les coffrets en préparation.</p>
           <div class="hero-actions">
             <a href="#projet" class="btn btn-secondary" onclick="gtag('event','click_int_decouvrir_fonctionnement');">Découvrir comment ça fonctionne</a>
             <a href="#contact" class="btn btn-primary" onclick="gtag('event','click_int_rejoindre_commercants_partenaires');">Rejoindre les commerçants partenaires</a>
           </div>
-          <div class="hero-jump-links" aria-label="Accès rapides">
-            <a href="#terrain">Voir les communes</a>
-            <a href="#packs">Voir les coffrets</a>
-            <a href="#faq">Questions fréquentes</a>
-          </div>
         </div>
       </div>
     </section>
 
-    <section id="projet" class="intro-wrap">
+    <section class="project-copy">
       <div class="container">
-        <div class="intro-card">
-          <p class="intro-accent">Localeo construit avec les commerçants et les communes des <strong>coffrets locaux 100% digitaux</strong> pour attirer plus de clients localement, avec un lancement progressif.</p>
+        <div class="project-copy-inner section-heading">
+          <p class="project-copy-text">
+            Localeo échange déjà avec des commerces de bouche, de bien-être, de restauration et de proximité pour construire des coffrets adaptés aux réalités du terrain.
+          </p>
         </div>
       </div>
     </section>
-
 
     <section class="stats-strip">
       <div class="container stats-grid">
@@ -144,20 +143,12 @@
       </div>
     </section>
 
-    <section class="project-copy">
-      <div class="container project-copy-inner">
-        <p class="project-copy-text">
-          Le projet se construit sur le terrain, à travers des échanges avec des commerçants de différents univers et la préparation progressive des premières offres locales.
-        </p>
-      </div>
-    </section>
-
     <section class="testimonials-section">
       <div class="container">
-        <div class="section-heading section-heading--center">
+        <div class="section-heading section-heading--testimonials">
           <h2>Ce que nous entendons sur le terrain</h2>
           <p class="packs-intro">
-            Ces échanges confirment l’intérêt du concept et font remonter des attentes très concrètes côté commerçants.
+            Ces échanges valident un besoin simple : proposer une offre locale plus forte à plusieurs, sans complexifier le quotidien du commerce.
           </p>
         </div>
         <div class="testimonials-grid">
@@ -179,237 +170,111 @@
 
 
 
-    <section class="terrain-proof">
-      <div class="container">
-        <h2>Localeo avance au contact des commerçants</h2>
-        <div class="commerce-list">
-          <span>Boulangeries</span>
-          <span>Poissonneries</span>
-          <span>Boucheries</span>
-          <span>Fromagers</span>
-          <span>Primeurs</span>
-          <span>Coiffeurs</span>
-          <span>Chocolateries</span>
-          <span>Salons d'Esthétique</span>
-          <span>Salons de thé</span>
-          <span>Fleuristes</span>
-          <span>Cavistes</span>
-          <span>Pizzerias</span>
-          <span>Petites alimentations</span>
-          <span>Torréfacteurs</span>
-          <span>Artisans gourmands</span>
-          <span>Photographes</span>
-        </div>
-      </div>
-    </section>
-
     <section class="packs-section" id="packs">
       <div class="container">
-        <div class="section-heading section-heading--center">
-          <h2>Des coffrets locaux pensés pour s’adapter à chaque commune</h2>
+        <div class="section-heading section-heading--packs">
+          <h2>Des coffrets locaux pensés pour générer plus de visibilité et de passage</h2>
           <p class="packs-intro">
-            Des coffrets construits à plusieurs, adaptables à chaque commune et pensés pour être attractifs auprès des habitants.
+            Chaque coffret réunit plusieurs commerces complémentaires dans une offre plus lisible, plus attractive et plus simple à relayer localement.
           </p>
         </div>
 
         <div class="digital-explainer" aria-label="Fonctionnement digital des coffrets">
           <div class="digital-explainer__badge">À retenir</div>
           <div class="digital-explainer__content">
-            <h3>Des coffrets locaux mutualisés et 100% digitaux</h3>
-            <p>Localeo permet à des commerçants d’une même commune de mutualiser leurs offres pour attirer plus de clients localement grâce à des coffrets plus visibles et plus attractifs.</p>
-            <p>Le fonctionnement reste simple : achat en ligne, <strong>QR code unique</strong> sur téléphone, puis utilisation directe chez les commerçants participants.</p>
-            <p>Les coffrets présentés ici sont une première proposition, adaptable aux spécificités de chaque commune.</p>
+            <h3>Des coffrets 100% digitaux, simples pour le client comme pour le commerçant</h3>
+            <p>Localeo permet à plusieurs commerçants d’une même commune de réunir leurs offres dans un coffret commun, plus visible et plus engageant qu’une offre isolée.</p>
+            <p>Le fonctionnement est simple : achat en ligne, <strong>QR code unique</strong> sur téléphone, puis validation rapide chez les commerçants participants.</p>
+            <p>Les coffrets présentés ici illustrent le format Localeo. Ils sont ensuite adaptés à la réalité commerciale de chaque commune.</p>
           </div>
         </div>
 
         <div class="key-message key-message--packs" aria-label="Bénéfice commerçant des coffrets Localeo">
-          <p class="key-message__eyebrow">Rôle des coffrets</p>
-          <p class="key-message__text">Les coffrets transforment plusieurs offres individuelles en une proposition locale plus lisible, plus attractive et plus facile à relayer.</p>
+          <p class="key-message__eyebrow">Pourquoi ça fonctionne</p>
+          <p class="key-message__text">Les coffrets donnent plus de force commerciale à plusieurs offres locales en les réunissant dans une proposition claire, concrète et facile à diffuser.</p>
         </div>
 
         <div class="packs-grid">
           <article class="pack-card">
-            <div class="pack-card__media"><img src="img/packs/pack-bien-etre.webp" alt="Illustration du Coffret Bien-être" loading="lazy"></div>
+            <div class="pack-card__media"><img src="img/packs/pack-bien-etre.webp" alt="Illustration du Coffret Bien-être" loading="lazy" decoding="async"></div>
             <div class="pack-card__body">
               <div class="pack-badge">BIEN-ÊTRE</div>
               <h3>Coffret Bien-être</h3>
-              <p class="pack-types">Coiffeur • Esthétique • Massage • Photographe</p>
-              <p class="pack-card__lead">Une offre collective pour mettre en avant plusieurs professionnels bien-être de la commune.</p>
-              <p class="pack-purpose">Utile pour générer du passage qualifié et valoriser des savoir-faire complémentaires.</p>
+              <p class="pack-types">Coiffeur • Esthétique • Massage • Fitness • Coaching • Photographe</p>
+              <p class="pack-card__lead">Une offre commune pour valoriser plusieurs professionnels du bien-être dans une même dynamique locale.</p>
+              <p class="pack-purpose">Idéal pour attirer un public qualifié et mettre en avant des savoir-faire complémentaires.</p>
             </div>
           </article>
 
           <article class="pack-card">
-            <div class="pack-card__media"><img src="img/packs/pack-gourmand.webp" alt="Illustration du Coffret Gourmand" loading="lazy"></div>
+            <div class="pack-card__media"><img src="img/packs/pack-gourmand.webp" alt="Illustration du Coffret Gourmand" loading="lazy" decoding="async"></div>
             <div class="pack-card__body">
               <div class="pack-badge">GOURMAND</div>
               <h3>Coffret Gourmand</h3>
               <p class="pack-types">Caviste • Fromager • Boucherie • Primeur • Salons de thé • Torréfacteur • Artisan gourmand</p>
-              <p class="pack-card__lead">Une offre locale gourmande facile à relayer entre plusieurs commerces partenaires.</p>
-              <p class="pack-purpose">Pensé pour créer du passage et stimuler l’achat local dans la commune.</p>
+              <p class="pack-card__lead">Une offre gourmande conçue pour créer un parcours d’achat local entre plusieurs commerces partenaires.</p>
+              <p class="pack-purpose">Pensé pour stimuler le passage, l’achat local et la découverte de plusieurs adresses.</p>
             </div>
           </article>
 
           <article class="pack-card">
-            <div class="pack-card__media"><img src="img/packs/pack-saveurs-locales.webp" alt="Illustration du Coffret Saveurs Locales" loading="lazy"></div>
+            <div class="pack-card__media"><img src="img/packs/pack-saveurs-locales.webp" alt="Illustration du Coffret Saveurs Locales" loading="lazy" decoding="async"></div>
             <div class="pack-card__body">
               <div class="pack-badge">SAVEURS LOCALES</div>
               <h3>Coffret Saveurs Locales</h3>
               <p class="pack-types">Restaurant • Pizzeria • Sushi • Bistrot • Bar</p>
-              <p class="pack-card__lead">Une offre commune pour mettre en avant plusieurs adresses conviviales.</p>
+              <p class="pack-card__lead">Une offre commune pour mettre en avant plusieurs adresses de restauration et de convivialité.</p>
               <p class="pack-purpose">Utile pour accroître la visibilité locale et faire circuler les habitants entre établissements partenaires.</p>
             </div>
           </article>
 
           <article class="pack-card">
-            <div class="pack-card__media"><img src="img/packs/pack-malin.webp" alt="Illustration du Coffret Malin" loading="lazy"></div>
+            <div class="pack-card__media"><img src="img/packs/pack-malin.webp" alt="Illustration du Coffret Malin" loading="lazy" decoding="async"></div>
             <div class="pack-card__body">
               <div class="pack-badge">MALIN</div>
               <h3>Coffret Malin</h3>
               <p class="pack-types">Boulanger • Épicerie • Petite alimentation</p>
               <p class="pack-card__lead">Un coffret du quotidien pour créer des habitudes d’achat dans plusieurs commerces de proximité.</p>
-              <p class="pack-purpose">Pensé pour générer du passage régulier, fidéliser localement et mieux occuper certains créneaux.</p>
+              <p class="pack-purpose">Pensé pour générer un passage régulier, fidéliser localement et mieux activer certains créneaux.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-<div class="pack-concrete-example">
-  <h3>Exemple concret d’un coffret</h3>
-  <p class="pack-concrete-intro">
-    Un coffret Localeo peut réunir plusieurs commerces complémentaires d’une même commune autour d’un usage, d’une envie ou d’un univers de consommation.
-  </p>
+<div class="container">
+  <div class="pack-concrete-example">
+    <h3>Exemple concret d’un coffret</h3>
+    <p class="pack-concrete-intro">
+      Un coffret Localeo peut réunir plusieurs commerces complémentaires d’une même commune autour d’un usage concret, d’une envie ou d’un moment de consommation.
+    </p>
 
-  <p class="pack-concrete-intro">
-    L’intérêt pour les commerces participants est simple : proposer une offre locale plus forte à plusieurs et créer plus de passage dans chaque point de vente.
-  </p>
+    <p class="pack-concrete-intro">
+      L’objectif est simple : proposer une offre plus forte à plusieurs et créer du passage dans chaque point de vente participant.
+    </p>
 
-  <div class="pack-concrete-grid">
-    <div class="pack-concrete-item">
-      <strong>🍷 Caviste</strong>
-      <span>Dégustation découverte</span>
-    </div>
-    <div class="pack-concrete-item">
-      <strong>🧀 Fromager</strong>
-      <span>Sélection artisanale</span>
-    </div>
-    <div class="pack-concrete-item">
-      <strong>🥕 Primeur</strong>
-      <span>Panier gourmand</span>
-    </div>
-    <div class="pack-concrete-item">
-      <strong>🍵 Marchand de thé</strong>
-      <span>Assortiment découverte</span>
+    <div class="pack-concrete-grid">
+      <div class="pack-concrete-item">
+        <strong>🍷 Caviste</strong>
+        <span>Dégustation découverte</span>
+      </div>
+      <div class="pack-concrete-item">
+        <strong>🧀 Fromager</strong>
+        <span>Sélection artisanale</span>
+      </div>
+      <div class="pack-concrete-item">
+        <strong>🥕 Primeur</strong>
+        <span>Panier gourmand</span>
+      </div>
+      <div class="pack-concrete-item">
+        <strong>🍵 Marchand de thé</strong>
+        <span>Assortiment découverte</span>
+      </div>
     </div>
   </div>
 </div>
 
 
-
-    <section id="terrain" class="terrain">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Côté Terrain</h2>
-
-        <div class="entre-deux-mers-line" aria-label="Zone de développement Localeo">
-          <span class="entre-pin" aria-hidden="true">📍</span>
-          <span>Localeo commence son développement dans les communes de l’Entre-deux-Mers.</span>
-        </div>
-
-        </div>
-
-        <div class="city-grid">
-          <article class="city-card city-card-premium">
-            <div class="city-image">
-              <img src="img/cities/carbon-blanc.webp" alt="Carbon-Blanc" loading="lazy">
-              <div class="city-overlay"></div>
-            </div>
-            <div class="city-content">
-              <h3>Carbon-Blanc</h3>
-              <p class="city-status active">● Échanges en cours</p>
-              <div class="city-metrics">
-                <span>15 commerces vus</span>
-                <span>7 intéressés</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="city-card city-card-premium">
-            <div class="city-image">
-              <img src="img/cities/saint-andre.webp" alt="Saint-André-de-Cubzac" loading="lazy">
-              <div class="city-overlay"></div>
-            </div>
-            <div class="city-content">
-              <h3>Saint-André-de-Cubzac</h3>
-              <p class="city-status active">● Échanges en cours</p>
-              <div class="city-metrics">
-                <span>18 commerces vus</span>
-                <span>9 intéressés</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="city-card city-card-premium">
-            <div class="city-image">
-              <img src="img/cities/carignan.webp" alt="Carignan" loading="lazy">
-              <div class="city-overlay"></div>
-            </div>
-            <div class="city-content">
-              <h3>Carignan</h3>
-              <p class="city-status active">● Coffrets en cours d'élaboration</p>
-              <div class="city-metrics">
-                <span>10 commerces vus</span>
-                <span>4 intéressés</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="city-card city-card-premium">
-            <div class="city-image">
-              <img src="img/cities/saint-loubes.webp" alt="Saint-Loubès" loading="lazy">
-              <div class="city-overlay"></div>
-            </div>
-            <div class="city-content">
-              <h3>Saint-Loubès</h3>
-              <p class="city-status active">● Échanges en cours</p>
-              <div class="city-metrics">
-                <span>4 commerces vus</span>
-                <span>2 intéressés</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="city-lists cards-view">
-          <article class="city-list-card">
-            <h4>Nous échangeons aussi avec ces communes</h4>
-            <div class="city-chip-list">
-              <span class="city-chip">Tresses</span>
-              <span class="city-chip">Fargues Saint Hilaire</span>
-              <span class="city-chip">Bassens</span>
-              <span class="city-chip">Saint Caprais de Bordeaux</span>
-              <span class="city-chip">Cénac</span>
-            </div>
-          </article>
-
-          <article class="city-list-card">
-            <h4>Communes à venir</h4>
-            <div class="city-chip-list">
-              <span class="city-chip">Artigues près Bordeaux</span>
-              <span class="city-chip">Yvrac</span>
-              <span class="city-chip">Montussan</span>
-              <span class="city-chip">Pompignac</span>
-              <span class="city-chip">Bouliac</span>
-            </div>
-          </article>
-        </div>
-        
-
-</div>
-
-      </div>
-    </section>
 
     <!--
     <section class="pillars">
@@ -463,33 +328,26 @@
       <div class="merchant-overlay-bg"></div>
       <div class="container merchant-top">
         <p class="merchant-title">Côté <span>commerçants</span></p>
-        <p class="merchant-intro">Localeo est en phase de lancement et construit ses premiers coffrets avec des commerçants partenaires. Le fonctionnement reste <strong>100% digital</strong>, simple à utiliser et pensé pour le quotidien du commerce.</p>
-        <p class="merchant-intro">En parallèle, Localeo prépare une première version du marketplace et une application commerçant. Rejoindre Localeo maintenant, c’est aussi faire partie des premiers commerces visibles au lancement.</p>
-
-        <div class="key-message key-message--merchant" aria-label="Message clé sur l'outil commerçant">
-          <p class="key-message__eyebrow">Outil commerçant</p>
-          <p class="key-message__text">Localeo met à disposition des commerçants un outil simple pour proposer, gérer et suivre leurs offres afin d’attirer plus de clients localement, y compris sur les heures creuses.</p>
-        </div>
+        <p class="merchant-intro">Localeo réunit plusieurs offres locales dans des coffrets <strong>100% digitaux</strong>, simples à gérer et conçus pour générer plus de visibilité et de passage.</p>
 
         <div class="merchant-block">
-          <h3 class="merchant-block-title">Ce que Localeo peut apporter concrètement à votre commerce</h3>
-          <p class="merchant-intro">Ici, on parle du résultat concret pour votre commerce : plus de clients, plus de passage et une activation locale plus simple.</p>
+          <h3 class="merchant-block-title">Ce que Localeo peut apporter à votre commerce</h3>
           <div class="merchant-value-grid">
             <article class="merchant-value-card">
               <h3>Plus de clients locaux</h3>
-              <p>Attirez de nouveaux clients à l’échelle de votre commune et valorisez votre commerce dans une offre collective.</p>
+              <p>Attirez de nouveaux clients grâce à une offre plus visible qu’une action isolée.</p>
             </article>
             <article class="merchant-value-card">
               <h3>Plus de passage</h3>
-              <p>Créez plus de fréquentation, y compris sur les heures creuses, grâce à des offres plus attractives.</p>
+              <p>Créez plus de fréquentation, y compris sur les heures creuses.</p>
             </article>
             <article class="merchant-value-card">
-              <h3>Une offre plus forte à plusieurs</h3>
-              <p>Associez votre activité à d’autres commerces complémentaires pour construire un coffret local cohérent.</p>
+              <h3>Une offre plus forte</h3>
+              <p>Associez votre activité à d’autres commerces complémentaires dans un coffret cohérent.</p>
             </article>
             <article class="merchant-value-card">
-              <h3>Un fonctionnement simple</h3>
-              <p>Soyez parmi les premiers commerces visibles sur la marketplace Localeo, avec un outil simple pour suivre vos prestations.</p>
+              <h3>Une gestion simple</h3>
+              <p>QR code, validation rapide et aucun support physique à gérer.</p>
             </article>
           </div>
         </div>
@@ -500,29 +358,22 @@
             <article class="step-card active">
               <span class="step-dot"></span>
               <div>
-                <h4>Étape 1 — Rencontre des commerces</h4>
-                <p>Nous échangeons avec les commerçants pour identifier les activités complémentaires et imaginer une offre cohérente dans la commune.</p>
+                <h4>Étape 1 — Sélection des commerces</h4>
+                <p>Nous identifions les commerces complémentaires pour construire une offre cohérente.</p>
               </div>
             </article>
             <article class="step-card">
               <span class="step-dot"></span>
               <div>
                 <h4>Étape 2 — Construction du coffret</h4>
-                <p>Nous construisons un coffret attractif qui associe plusieurs prestations locales autour d’un même thème, usage ou moment de vie.</p>
+                <p>Nous réunissons plusieurs prestations dans un coffret simple et attractif.</p>
               </div>
             </article>
             <article class="step-card">
               <span class="step-dot"></span>
               <div>
-                <h4>Étape 3 — Promotion et diffusion</h4>
-                <p>Localeo prépare la mise en visibilité des coffrets auprès des habitants et des relais locaux pour accompagner le lancement.</p>
-              </div>
-            </article>
-            <article class="step-card">
-              <span class="step-dot"></span>
-              <div>
-                <h4>Étape 4 — Validation simple en magasin</h4>
-                <p>Le fonctionnement est conçu pour rester simple : <strong>QR code</strong>, validation rapide en magasin et aucun support physique à gérer.</p>
+                <h4>Étape 3 — Mise en visibilité</h4>
+                <p>Localeo met le coffret en visibilité, puis l’utilisation se fait par QR code chez les commerçants participants.</p>
               </div>
             </article>
           </div>
@@ -530,17 +381,16 @@
 
         <div class="merchant-block">
           <h3 class="merchant-block-title">Pourquoi rejoindre Localeo dès aujourd’hui ?</h3>
-          <p class="merchant-intro">Ici, l’enjeu n’est plus le bénéfice général du concept, mais l’avantage d’entrer tôt dans le lancement.</p>
           <div class="merchant-benefits merchant-benefits--large">
-            <span>Faire partie des premiers commerces intégrés dans les coffrets de votre commune</span>
-            <span>Être visible dès le lancement auprès des habitants</span>
-            <span>Intégrer en priorité la marketplace Localeo</span>
-            <span>Influencer la construction de l’offre dès la phase de lancement</span>
+            <span>Intégrer les premiers coffrets de votre commune</span>
+            <span>Être visible dès le lancement</span>
+            <span>Entrer tôt dans la marketplace Localeo</span>
+            <span>Participer à la construction de l’offre</span>
           </div>
         </div>
 
         <div class="merchant-cta-row">
-          <p>Rejoignez les premiers commerçants partenaires de votre commune.</p>
+          <p>Rejoignez les premiers commerçants partenaires.</p>
           <a href="#contact" class="btn btn-primary" onclick="gtag('event','click_int_je_souhaite_participer');">Être recontacté</a>
         </div>
 </div>
@@ -549,7 +399,7 @@
     <section id="faq" class="faq-section">
       <div class="container faq-wrap">
         <h3>FAQ commerçants</h3>
-        <p class="faq-intro">Les questions les plus fréquentes avant de rejoindre les premiers coffrets Localeo.</p>
+        <p class="faq-intro">Les réponses essentielles avant de rejoindre les premiers coffrets Localeo.</p>
 
         <details open>
           <summary>Est-ce que Localeo est déjà disponible ?</summary>
@@ -558,7 +408,7 @@
 
         <details>
           <summary>Pourquoi rejoindre maintenant si le projet n’est pas encore lancé ?</summary>
-          <p>Parce que les premiers commerçants partenaires participeront aux premiers coffrets de leur commune et feront partie des premiers commerces visibles sur la marketplace Localeo.</p>
+          <p>Parce que les premiers commerçants partenaires participeront aux premiers coffrets de leur commune et feront partie des premiers commerces visibles à l’ouverture de la marketplace Localeo.</p>
         </details>
 
         <details>
@@ -614,8 +464,8 @@
         <h3>Rejoindre les premiers commerçants partenaires</h3>
         <div class="qualification-card">
           <p class="qualification-card__eyebrow">Préqualification commerçant</p>
-          <p class="qualification-card__title">Vérifiez en 2 minutes si votre commerce peut rejoindre les premiers coffrets</p>
-          <p class="qualification-card__text">Dernière étape : laissez-nous vos coordonnées et quelques informations sur votre commerce. Nous revenons vers vous pour voir si votre activité peut intégrer un premier coffret Localeo.</p>
+          <p class="qualification-card__title">Vérifiez en 2 minutes si votre commerce peut intégrer un premier coffret Localeo</p>
+          <p class="qualification-card__text">Laissez-nous vos coordonnées et quelques informations sur votre commerce. Nous revenons vers vous pour voir comment votre activité peut s’intégrer à l’un des premiers coffrets de votre commune.</p>
           <div class="qualification-points">
             <span>Votre commune</span>
             <span>Votre activité</span>
@@ -623,10 +473,10 @@
             <span>Votre intérêt pour rejoindre un coffret</span>
           </div>
           <p class="qualification-card__note">Sans engagement. Ces informations nous permettent de qualifier rapidement votre demande.</p>
-          <p class="qualification-card__note">Après votre demande, nous revenons vers vous pour voir comment votre activité peut s’intégrer à l’un des premiers coffrets dans votre commune.</p>
+          <p class="qualification-card__note">Après votre demande, nous revenons vers vous avec un premier échange sur votre activité, votre commune et les complémentarités possibles.</p>
         </div>
         <div class="contact-grid">
-          <a class="contact-card contact-card--primary" href="https://tally.so/r/5Bk42E" target="_new" onclick="gtag('event','click_ext_demande_recontact');">
+          <a class="contact-card contact-card--primary" href="https://tally.so/r/5Bk42E" target="_new" rel="noopener noreferrer" onclick="gtag('event','click_ext_demande_recontact');">
             <span class="contact-mark svg-contact" aria-hidden="true">
               <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="5" y="3" width="14" height="18" rx="2"></rect>
@@ -637,7 +487,7 @@
             </span>
             <div>
               <strong>Être recontacté</strong>
-              <span>Le moyen le plus simple pour savoir si votre commerce peut intégrer un premier coffret Localeo.</span>
+              <span>Le moyen le plus simple pour voir si votre commerce peut rejoindre un premier coffret Localeo.</span>
             </div>
           </a>
           <a class="contact-card" href="mailto:contactlocaleo@gmail.com" onclick="gtag('event','click_ext_contact');">
@@ -668,7 +518,7 @@
               </div>
             </div>
           </a>
-          <a class="contact-card" href="https://www.facebook.com/profile.php?id=61586409877177&locale=fr_FR" target="_new" onclick="gtag('event','click_ext_facebook');">
+          <a class="contact-card" href="https://www.facebook.com/profile.php?id=61586409877177&locale=fr_FR" target="_new" rel="noopener noreferrer" onclick="gtag('event','click_ext_facebook');">
             <span class="contact-mark svg-contact" aria-hidden="true">
               <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M14 8h3"></path>
@@ -680,7 +530,7 @@
               <span>Voir les avancées du lancement sur Facebook</span>
             </div>
           </a>
-          <a class="contact-card" href="https://tally.so/r/Zj6NMy" target="_new" onclick="gtag('event','click_ext_proposition_offre');">
+          <a class="contact-card" href="https://tally.so/r/Zj6NMy" target="_new" rel="noopener noreferrer" onclick="gtag('event','click_ext_proposition_offre');">
             <span class="contact-mark svg-contact" aria-hidden="true">
               <svg class="icon-localeo" viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="3" y="8" width="18" height="13"></rect>
@@ -692,14 +542,14 @@
             </span>
             <div>
               <strong>Proposer une offre</strong>
-              <span>Contribuer à la construction des premiers coffrets locaux</span>
+              <span>Contribuer à la construction des premiers coffrets de votre commune</span>
             </div>
           </a>
         </div>
       </div>
     </section>
   </main>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <footer class="site-footer">
     <div class="container footer-wrap">
       <p class="footer-quote">
