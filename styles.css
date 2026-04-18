@@ -3095,3 +3095,411 @@ overflow-x:hidden;
     padding-right: 18px;
   }
 }
+
+/* ===== Ergonomie home refresh ===== */
+:root {
+  --header-height: 84px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+#projet,
+#terrain,
+#commercants,
+#packs,
+#faq,
+#contact {
+  scroll-margin-top: 104px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  background: rgba(8, 29, 46, .72);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+  transition: background .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.site-header.is-scrolled {
+  background: rgba(8, 29, 46, .9);
+  box-shadow: 0 14px 32px rgba(4, 18, 29, .22);
+  border-bottom-color: rgba(255, 255, 255, .12);
+}
+
+.header-row {
+  min-height: var(--header-height);
+}
+
+.site-nav a,
+.header-cta,
+.btn,
+.contact-card,
+.city-card,
+.pack-card,
+.merchant-value-card,
+.testimonial-card,
+.qualification-points span {
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.site-nav a:focus-visible,
+.header-cta:focus-visible,
+.btn:focus-visible,
+.contact-card:focus-visible,
+.menu-toggle:focus-visible,
+.hero-jump-links a:focus-visible {
+  outline: 3px solid rgba(255, 211, 158, .95);
+  outline-offset: 3px;
+}
+
+.hero {
+  min-height: calc(100svh - var(--header-height));
+  display: flex;
+  align-items: stretch;
+}
+
+.hero-shell {
+  min-height: calc(100svh - var(--header-height));
+  display: flex;
+  align-items: center;
+  padding: 44px 0 54px;
+}
+
+.hero-panel {
+  max-width: 760px;
+}
+
+.hero-panel h1 {
+  max-width: 14ch;
+  font-size: clamp(3rem, 6vw, 5.3rem);
+  line-height: .95;
+  letter-spacing: -.04em;
+}
+
+.hero-text-authentic {
+  max-width: 58ch;
+  font-size: 1.05rem;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+.hero-highlights span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .18);
+  color: #fff;
+  font-size: .94rem;
+  font-weight: 800;
+  backdrop-filter: blur(6px);
+}
+
+.hero-proof {
+  max-width: 50ch;
+}
+
+.hero-actions {
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.hero-jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.hero-jump-links a {
+  color: rgba(255, 255, 255, .9);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: .96rem;
+}
+
+.hero-jump-links a:hover {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.intro-wrap {
+  margin-top: 0;
+}
+
+.intro-card {
+  max-width: 920px;
+  margin: -28px auto 0;
+  padding: 24px 28px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 248, 241, .98) 0%, #ffffff 100%);
+  box-shadow: 0 18px 40px rgba(11, 61, 99, .12);
+}
+
+.stats-strip {
+  padding: 26px 0 8px;
+}
+
+.stats-grid {
+  gap: 16px;
+}
+
+.stat-box {
+  border-radius: 22px;
+}
+
+.project-copy {
+  padding-top: 10px;
+}
+
+.testimonials-section,
+.packs-section,
+.terrain,
+.merchant-panel,
+.faq-section,
+.contact-section {
+  scroll-margin-top: 104px;
+}
+
+.section-heading h2,
+.merchant-block-title,
+.qualification-card__title,
+.faq-wrap h3 {
+  text-wrap: balance;
+}
+
+.digital-explainer,
+.key-message,
+.qualification-card,
+.contact-card,
+.city-card,
+.testimonial-card,
+.merchant-value-card,
+.pack-card {
+  border-radius: 24px;
+}
+
+.city-card:hover,
+.contact-card:hover,
+.testimonial-card:hover,
+.merchant-value-card:hover {
+  transform: translateY(-3px);
+}
+
+.contact-grid {
+  align-items: stretch;
+}
+
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 18, 30, .5);
+  backdrop-filter: blur(3px);
+  z-index: 1400;
+}
+
+@media (min-width: 861px) {
+  .nav-backdrop {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-shell {
+    padding: 36px 0 44px;
+  }
+
+  .hero-panel h1 {
+    max-width: 15ch;
+    font-size: clamp(2.8rem, 7vw, 4.6rem);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  .site-header {
+    background: rgba(8, 29, 46, .88);
+  }
+
+  .brand-note {
+    display: none;
+  }
+
+  .site-nav {
+    width: min(82vw, 320px);
+    right: calc(-1 * min(82vw, 320px));
+    padding: 84px 16px 24px;
+    gap: 8px;
+    box-shadow: -18px 0 48px rgba(2, 14, 23, .36);
+  }
+
+  .site-nav a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .menu-toggle {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .08);
+  }
+
+  .hero,
+  .hero-shell {
+    min-height: auto;
+  }
+
+  .hero-shell {
+    align-items: flex-end;
+    padding: 26px 0 34px;
+  }
+
+  .hero-panel {
+    max-width: 100%;
+  }
+
+  .hero-panel h1 {
+    max-width: 11ch;
+    font-size: clamp(2.4rem, 10vw, 4rem);
+  }
+
+  .hero-kicker {
+    max-width: 34ch;
+  }
+
+  .hero-text-authentic {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .hero-highlights {
+    gap: 8px;
+  }
+
+  .hero-highlights span {
+    min-height: 36px;
+    padding: 0 12px;
+    font-size: .88rem;
+  }
+
+  .hero-jump-links {
+    gap: 12px 16px;
+  }
+
+  .intro-card {
+    margin-top: -14px;
+    padding: 20px 18px;
+  }
+
+  .stats-grid,
+  .packs-grid,
+  .contact-grid,
+  .city-grid,
+  .city-lists,
+  .merchant-value-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box {
+    padding: 18px 16px;
+  }
+
+  .packs-section,
+  .terrain,
+  .merchant-panel,
+  .faq-section,
+  .contact-section {
+    padding-top: 42px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(calc(100% - 24px), 1240px);
+  }
+
+  #projet,
+  #terrain,
+  #commercants,
+  #packs,
+  #faq,
+  #contact {
+    scroll-margin-top: 88px;
+  }
+
+  .hero-fade {
+    background: linear-gradient(180deg, rgba(7, 28, 44, .92) 0%, rgba(8, 39, 62, .8) 54%, rgba(8, 39, 62, .42) 100%);
+  }
+
+  .hero-panel h1 {
+    max-width: 100%;
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+    line-height: .98;
+  }
+
+  .hero-actions .btn {
+    min-height: 52px;
+  }
+
+  .hero-jump-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hero-jump-links a {
+    font-size: .94rem;
+  }
+
+  .packs-intro,
+  .contact-intro,
+  .merchant-intro,
+  .project-copy-text {
+    font-size: .98rem;
+  }
+
+  .digital-explainer,
+  .key-message,
+  .qualification-card,
+  .pack-card,
+  .testimonial-card,
+  .merchant-value-card,
+  .contact-card {
+    border-radius: 20px;
+  }
+
+  .pack-card__body {
+    padding: 16px 6px 4px;
+  }
+
+  .city-metrics,
+  .qualification-points {
+    gap: 8px;
+  }
+}
