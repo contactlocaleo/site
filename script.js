@@ -6,6 +6,85 @@ const nav=document.querySelector(".site-nav");
 const navBackdrop=document.querySelector(".nav-backdrop");
 const body=document.body;
 const header=document.querySelector(".site-header");
+const consentBanner=document.querySelector("#consent-banner");
+const consentButtons=document.querySelectorAll("[data-consent-action]");
+const analyticsStorageKey="localeo-analytics-consent";
+const analyticsMeasurementId="G-S7S7T0P3H5";
+let analyticsLoaded=false;
+
+window.dataLayer=window.dataLayer || [];
+window.gtag=window.gtag || function(){window.dataLayer.push(arguments);};
+
+function readConsent(){
+try{
+return localStorage.getItem(analyticsStorageKey);
+}catch{
+return null;
+}
+}
+
+function writeConsent(value){
+try{
+localStorage.setItem(analyticsStorageKey,value);
+}catch{
+// Keep the UI functional even if storage is unavailable.
+}
+}
+
+function loadAnalytics(){
+if(analyticsLoaded){
+return;
+}
+
+const analyticsScript=document.createElement("script");
+analyticsScript.async=true;
+analyticsScript.src=`https://www.googletagmanager.com/gtag/js?id=${analyticsMeasurementId}`;
+document.head.appendChild(analyticsScript);
+
+gtag("js",new Date());
+gtag("config",analyticsMeasurementId,{
+anonymize_ip:true,
+allow_google_signals:false,
+allow_ad_personalization_signals:false
+});
+
+analyticsLoaded=true;
+}
+
+function setConsent(value){
+writeConsent(value);
+
+if(consentBanner){
+consentBanner.hidden=true;
+}
+
+if(value==="accepted"){
+try{
+loadAnalytics();
+}catch(error){
+console.error("Analytics could not be loaded.",error);
+}
+}
+}
+
+window.setLocaleoConsent=setConsent;
+
+function initConsent(){
+const savedConsent=readConsent();
+
+if(savedConsent==="accepted"){
+loadAnalytics();
+return;
+}
+
+if(savedConsent==="rejected"){
+return;
+}
+
+if(consentBanner){
+consentBanner.hidden=false;
+}
+}
 
 if(toggle && nav){
 
@@ -71,44 +150,10 @@ header.classList.toggle("is-scrolled",window.scrollY>16);
 syncHeaderState();
 window.addEventListener("scroll",syncHeaderState,{passive:true});
 
-/* ===== COMPTEURS ===== */
-
-const counters=document.querySelectorAll("[data-target]");
-
-function animateCounter(el){
-
-const target=parseInt(el.dataset.target);
-const duration=1000;
-const start=performance.now();
-
-function update(now){
-
-const progress=Math.min((now-start)/duration,1);
-el.textContent=Math.floor(progress*target);
-
-if(progress<1){
-requestAnimationFrame(update);
-}else{
-el.textContent=target;
-}
-
-}
-
-requestAnimationFrame(update);
-
-}
-
-if(counters.length){
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-animateCounter(entry.target);
-observer.unobserve(entry.target);
-}
+consentButtons.forEach(button=>{
+button.addEventListener("click",()=>{
+setConsent(button.dataset.consentAction==="accept"?"accepted":"rejected");
 });
-},{threshold:.4});
+});
 
-counters.forEach(c=>observer.observe(c));
-
-}
+initConsent();
