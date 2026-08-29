@@ -52,3 +52,6 @@ button{font:inherit}.contact-dialog{width:min(760px,calc(100vw - 32px));max-heig
 /* Fresque plein cadre — le bloc reste entièrement couvert */
 .life-fresco img{object-fit:cover;object-position:center}
 .life-fresco figcaption strong{margin-top:0}
+
+/* Dégagement optique de l’accent dans la dernière ligne du hero */
+.hero h1 em{position:relative;top:.07em}
