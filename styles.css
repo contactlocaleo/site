@@ -27,7 +27,7 @@ button{font:inherit}.contact-dialog{width:min(760px,calc(100vw - 32px));max-heig
 @media(max-width:600px){.contact-dialog{width:100%;max-height:calc(100dvh - 12px);margin-top:auto;margin-bottom:0}.contact-dialog__panel{padding:28px 20px 22px}.contact-dialog__intro{padding-right:36px}.contact-dialog__intro h2{font-size:2.35rem}.support-form{grid-template-columns:1fr;gap:14px;margin-top:25px}.form-field--full{grid-column:1}.field-error{min-height:0}.support-form .button{width:100%;min-height:54px}.contact-dialog__close{right:12px;top:12px}}
 
 /* Densité desktop — davantage de contenu visible à 100 % */
-@media(min-width:1181px){.hero{height:min(88svh,900px);min-height:680px}.hero-copy{top:51%}.hero h1{font-size:clamp(4rem,5.9vw,6.3rem)}.hero-lead{margin-top:22px;margin-bottom:26px}.hero-stamp{width:132px;height:132px;bottom:7vh}.hero-stamp img{width:58px}.intro{padding-top:78px}.intro-main h2,.section-heading h2,.coffret h2,.journey h2,.territories h2,.contact h2{font-size:clamp(3.2rem,4.7vw,5.25rem)}.intro-copy{margin-top:30px}.promise-strip{margin-top:44px;padding-top:19px;padding-bottom:19px}.ecosystem{margin-top:68px;padding-top:76px;padding-bottom:82px}.section-heading{gap:4vw}.product-orbit{min-height:610px;margin-top:52px}.orbit-center{width:170px;height:170px;box-shadow:0 0 0 28px #ffffff0c,0 0 0 56px #ffffff08}.orbit-center img{width:76px}.orbit-center span{font-size:.92rem}.product{min-height:225px;padding:22px;grid-template-columns:66px 1fr;gap:18px}.product img{width:60px;height:60px}.product-number{top:18px;font-size:3rem}.product h3{font-size:clamp(1.8rem,2.45vw,2.65rem)}.product-copy{margin-top:11px;font-size:.9rem;line-height:1.55}.product-cta{margin-top:14px}.coffret{min-height:640px}.coffret-visual img{width:min(38%,250px)}.coffret-visual>span{width:104px;height:104px}.coffret-copy{padding-top:62px;padding-bottom:62px}.coffret-copy .kicker{margin-top:34px}.coffret-copy>p:not(.kicker,.coffret-note){margin-top:20px;margin-bottom:20px}.coffret-copy ul{margin-top:22px;margin-bottom:22px}.coffret-copy li{padding-top:13px;padding-bottom:13px}.coffret-note{padding:16px 18px}.journey{padding-top:78px;padding-bottom:82px}.journey-track{margin-top:48px}.journey-track:before{top:69px}.journey-track b{width:76px;height:76px;margin-top:12px;margin-bottom:16px}.territories{min-height:640px}.territory-copy{padding-top:66px;padding-bottom:62px}.territory-copy h2{margin-top:34px}.territory-copy ul{margin-top:32px}.territory-copy li{padding-top:15px;padding-bottom:15px}.proof-line{margin-top:28px}.contact{padding-top:82px;padding-bottom:86px}.contact h2{margin-top:12px;margin-bottom:18px}.contact-actions{margin-top:28px}.site-footer{padding-top:32px;padding-bottom:32px}}
+@media(min-width:1181px){.hero{height:min(88svh,900px);min-height:680px}.hero-copy{top:51%;width:min(1280px,75vw)}.hero h1{font-size:clamp(4rem,5vw,5.8rem)}.hero-lead{margin-top:22px;margin-bottom:26px}.hero-stamp{width:132px;height:132px;bottom:7vh}.hero-stamp img{width:58px}.intro{padding-top:78px}.intro-main h2,.section-heading h2,.coffret h2,.journey h2,.territories h2,.contact h2{font-size:clamp(3.2rem,4.7vw,5.25rem)}.intro-copy{margin-top:30px}.promise-strip{margin-top:44px;padding-top:19px;padding-bottom:19px}.ecosystem{margin-top:68px;padding-top:76px;padding-bottom:82px}.section-heading{gap:4vw}.product-orbit{min-height:610px;margin-top:52px}.orbit-center{width:170px;height:170px;box-shadow:0 0 0 28px #ffffff0c,0 0 0 56px #ffffff08}.orbit-center img{width:76px}.orbit-center span{font-size:.92rem}.product{min-height:225px;padding:22px;grid-template-columns:66px 1fr;gap:18px}.product img{width:60px;height:60px}.product-number{top:18px;font-size:3rem}.product h3{font-size:clamp(1.8rem,2.45vw,2.65rem)}.product-copy{margin-top:11px;font-size:.9rem;line-height:1.55}.product-cta{margin-top:14px}.coffret{min-height:640px}.coffret-visual img{width:min(38%,250px)}.coffret-visual>span{width:104px;height:104px}.coffret-copy{padding-top:62px;padding-bottom:62px}.coffret-copy .kicker{margin-top:34px}.coffret-copy>p:not(.kicker,.coffret-note){margin-top:20px;margin-bottom:20px}.coffret-copy ul{margin-top:22px;margin-bottom:22px}.coffret-copy li{padding-top:13px;padding-bottom:13px}.coffret-note{padding:16px 18px}.journey{padding-top:78px;padding-bottom:82px}.journey-track{margin-top:48px}.journey-track:before{top:69px}.journey-track b{width:76px;height:76px;margin-top:12px;margin-bottom:16px}.territories{min-height:640px}.territory-copy{padding-top:66px;padding-bottom:62px}.territory-copy h2{margin-top:34px}.territory-copy ul{margin-top:32px}.territory-copy li{padding-top:15px;padding-bottom:15px}.proof-line{margin-top:28px}.contact{padding-top:82px;padding-bottom:86px}.contact h2{margin-top:12px;margin-bottom:18px}.contact-actions{margin-top:28px}.site-footer{padding-top:32px;padding-bottom:32px}}
 
 /* Avant-première Marketplace et nouvelle photo de la section 5 */
 .launch-badge{display:inline-flex;align-items:center;gap:8px;min-height:56px;padding:10px 18px;background:var(--orange);color:#fff;font-size:.82rem;line-height:1.35;box-shadow:0 14px 34px #08284040}.launch-badge b{padding:4px 7px;background:#fff;color:var(--blue);font-size:.67rem;text-transform:uppercase;letter-spacing:.08em}.launch-badge i,.product-launch i{font-style:normal;animation:bob 1.8s ease-in-out infinite}.product-launch{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:9px 12px;border:1px solid #f28a2e99;color:#ffd5ad;font-size:.73rem;font-weight:700}.territory-photo{background:linear-gradient(#0b3d6318,#0b3d6318),url("img/territoires-localeo-2026.png") 52% center/cover}
@@ -48,6 +48,44 @@ button{font:inherit}.contact-dialog{width:min(760px,calc(100vw - 32px));max-heig
 
 /* Section 05 — priorité au message, fresque en soutien */
 @media(min-width:1101px){.territories{grid-template-columns:minmax(480px,.82fr) minmax(620px,1.18fr)}.territory-copy{padding-inline:clamp(44px,5vw,80px)}.territory-copy h2{max-width:10ch}.life-fresco figcaption{right:clamp(20px,3vw,44px)}}
+
+/* Header desktop — hiérarchie, contraste et navigation active */
+section[id]{scroll-margin-top:90px}
+.site-header{background:linear-gradient(180deg,#08284099 0%,#0828403d 58%,transparent 100%);transition:height .3s ease,background-color .3s ease,color .3s ease,border-color .3s ease,box-shadow .3s ease,backdrop-filter .3s ease}
+.site-header.is-scrolled{background:#fffffff4}
+.site-nav a:after{right:100%;bottom:4px;height:2px}
+.site-nav a:hover:after,.site-nav a[aria-current="location"]:after{right:0}
+.site-nav a[aria-current="location"]{font-weight:700}
+.header-cta{background:var(--orange);border-color:var(--orange);color:#fff;box-shadow:0 10px 24px #0828402b;transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+.header-cta span{color:#fff;transition:transform .25s ease}
+.header-cta:hover{transform:translateY(-2px);background:#e96e12;box-shadow:0 14px 30px #08284038}
+.header-cta:hover span{transform:translate(2px,-2px)}
+.site-header.is-scrolled .header-cta{color:#fff}
+
+/* Le header reste sur une seule ligne, y compris sur un écran 1920 px mis à
+   l'échelle par Windows (viewport CSS souvent compris entre 1280 et 1536 px). */
+@media(min-width:1101px){
+.site-header{column-gap:clamp(20px,2.2vw,42px)}
+.brand,.site-nav,.header-cta{flex-shrink:0}
+.brand,.site-nav a,.header-cta{white-space:nowrap}
+.header-cta{display:inline-flex;align-items:center;justify-content:center;gap:6px;line-height:1.2}
+}
+
+@media(min-width:1101px) and (max-width:1400px){
+.site-nav{gap:clamp(16px,1.7vw,24px);font-size:.8rem}
+.header-cta{padding-inline:14px;font-size:.75rem}
+}
+
+/* Le menu compact arrive avant que le logo, les liens et le CTA ne se tassent. */
+@media(min-width:951px) and (max-width:1100px){
+.site-header,.site-header.is-scrolled{height:70px;padding-inline:24px}
+.site-nav{position:fixed;right:-100%;top:0;width:min(85vw,380px);height:100vh;z-index:4;padding:100px 32px;background:#fff;color:var(--blue);display:flex;flex-direction:column;gap:28px;transition:right .3s}
+.site-nav.is-open{right:0}
+.site-nav a{min-height:48px;font-size:1rem;border-bottom:1px solid var(--line)}
+.menu-toggle{display:block;margin-left:auto;z-index:5;border:0;background:none;color:inherit;font-weight:700}
+.header-cta{display:none}
+.nav-backdrop{position:fixed;inset:0;background:#03164999;z-index:3}
+}
 
 /* Fresque plein cadre — le bloc reste entièrement couvert */
 .life-fresco img{object-fit:cover;object-position:center}

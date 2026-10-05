@@ -144,11 +144,42 @@ if(!header){
 return;
 }
 
-header.classList.toggle("is-scrolled",window.scrollY>16);
+header.classList.toggle("is-scrolled",window.scrollY>96);
 }
 
 syncHeaderState();
 window.addEventListener("scroll",syncHeaderState,{passive:true});
+
+const headerNavLinks=[...document.querySelectorAll('.site-nav a[href^="#"]')];
+const observedSections=headerNavLinks
+.map(link=>document.querySelector(link.getAttribute("href")))
+.filter(Boolean);
+
+if("IntersectionObserver" in window && observedSections.length){
+const sectionObserver=new IntersectionObserver(entries=>{
+const visibleEntry=entries
+.filter(entry=>entry.isIntersecting)
+.sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+
+if(!visibleEntry){
+return;
+}
+
+headerNavLinks.forEach(link=>{
+const isCurrent=link.getAttribute("href")===`#${visibleEntry.target.id}`;
+if(isCurrent){
+link.setAttribute("aria-current","location");
+}else{
+link.removeAttribute("aria-current");
+}
+});
+},{
+rootMargin:"-22% 0px -62%",
+threshold:[0,.1,.25,.5]
+});
+
+observedSections.forEach(section=>sectionObserver.observe(section));
+}
 
 consentButtons.forEach(button=>{
 button.addEventListener("click",()=>{
